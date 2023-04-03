@@ -1,0 +1,17 @@
+.form-signup{
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: white;
+    padding: 15px;
+    
+    
+}
+
+body {
+    padding-top: 120px;
+    background-image: url(imagens/hotelzin.jpg);
+}
+
+.form-signup h2{
+    text-align: center;
+}
