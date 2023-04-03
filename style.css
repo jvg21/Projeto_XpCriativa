@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0dbdb;
+    color: #020202;
+    background-image: url('imagens/hotelzin.jpg');
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    /* background-size: 130vw; */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center
+    
+    
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    background-color: #cc0000;
+    color: #fdfdfd;
+    padding: 30px 0;
+    
+}
+
+.logo {
+    margin: 0;
+    
+    
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+main {
+    padding: 50px 0;
+}
+
+main h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #cc0000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 200px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+  }
+
+  .card {
+    width: 33.33%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .white {
+    background-color: white;
+    color: red;
+  }
+  .card img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+
+  .card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+  }
+.button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+.Titulo{
+  color: red;
+  font-weight: bold;
+}
