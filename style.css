@@ -26,6 +26,10 @@ body {
     
 }
 
+.break-line {
+  display: block;
+}
+
 header {
     display: flex;
     justify-content: left;
@@ -156,5 +160,7 @@ footer {
 }
 .Titulo{
   color: red;
+  width: 100%;
   font-weight: bold;
+  text-align: center;
 }
