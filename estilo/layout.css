@@ -1,0 +1,73 @@
+.content {
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+#corners {
+  border-radius: 20px;
+  background: #b0c5dd;
+  padding: 20px;
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.subTitulo {
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e8eaf4;
+  padding: 5px 20px;
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.tableCSS {
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.tableCSS td {
+  border: 5px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+}
+
+table.tableCSS th {
+  background-color: #7c93ad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+
+input,
+select,
+textarea {
+  font-size: 18px;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  width: 30%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #b0c5dd;
+  border: none;
+  box-shadow: 5px 10px 18px #1b1b1b;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
+  background-color: #d5e2f0;
+}
