@@ -37,6 +37,7 @@
                     Eu aceito o <a href="#">Termos de uso</a> & <a href="">Termos de Privacidade</a>
                 </label>
             </div>
+            <input type="reset" class="btn btn-success btn-block" value="Apagar">
             <input type="submit" class="btn btn-success btn-block" name="" value="Enviar" >
         </form>
     </div>

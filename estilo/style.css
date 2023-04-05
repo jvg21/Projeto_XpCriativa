@@ -61,10 +61,12 @@ nav {
 
 nav ul {
     list-style: none;
+    
 }
 
 nav ul li {
-    display: inline-block;
+    float: right;
+    /* display: inline-block; */
     margin-left: 20px;
 }
 
@@ -110,6 +112,7 @@ footer {
 
   .card {
     /* width: 30%; */
+    height: 400px;
     max-width: 800px;
     padding: 20px;
     box-sizing: border-box;
@@ -117,27 +120,34 @@ footer {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     min-width: 300px;
+    border-color: #000;
+    border-radius: 5px;
     
   }
 
   .red {
     background-color: red;
+    border-width: 5px;
+    border-color: white;
   }
 
   .white {
     background-color: white;
+    border-width: 5px;
+    border-color: red;
     color: red;
   }
   .card img {
-    width: 200px;
+    width: 220px;
+    min-height: 180px;
     height: auto;
     display: block;
     margin: auto;
     max-width: 100%;
+    border: 1px solid white;
 }
-
 
   .card h2 {
     font-size: 24px;
@@ -161,6 +171,9 @@ footer {
   cursor: pointer;
   margin-top: 10px;
   text-align: center;
+}
+.button:hover{
+  background-color: darkblue;
 }
 .Titulo{
   color: red;
