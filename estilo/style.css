@@ -109,7 +109,7 @@ footer {
   }
 
   .card {
-    width: 30%;
+    /* width: 30%; */
     max-width: 800px;
     padding: 20px;
     box-sizing: border-box;
@@ -118,6 +118,8 @@ footer {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1%;
+    min-width: 300px;
+    
   }
 
   .red {
