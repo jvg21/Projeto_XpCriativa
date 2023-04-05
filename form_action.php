@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS + Form: exemplos básicos</title>
+    <link rel="stylesheet" href="estilo/style.css" type="text/css">
     <link rel="stylesheet" href="estilo/layout.css" type="text/css">
 </head>
 
 <body>
     <script type="text/javascript" src="JS/formScript.js"></script>
+    <?php include 'menu.html'?>
     <div class="content">
 
-        <h3 id="corners">RECEBIMENTO DADOS DE FORMULÁRIOS</h3>
 
-        <p class="subTitulo">JS lê os dados enviados via <b>GET</b> de um Form HTML</p>
+        <p class="subTitulo"><b>Dados do Formulário</b></p>
         <table class="tableCSS">
             <tr><th>Chave</th><th>Valor</th></tr>
             <script language=javascript>
@@ -25,12 +26,13 @@
                 }
             </script>
             <tr><th colspan="2">
-                <input type=button name="Retornar" value=" << Retornar" onclick="window.location.href='CadUser.html'">
+                <input type=button name="Retornar" value=" << Retornar" onclick="window. history. back();">
             </th></tr>
         </table>
         
 
     </div>
+    <?php include 'rodape.html'?>
 </body>
 
 </html>

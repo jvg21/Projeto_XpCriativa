@@ -42,7 +42,7 @@ table.tableCSS td {
 }
 
 table.tableCSS th {
-  background-color: #7c93ad;
+  background-color: red;
   color: white;
   text-align: center;
   padding: 15px;
@@ -61,7 +61,8 @@ input[type=button] {
   width: 30%;
   padding: 5px;
   border-radius: 10px;
-  background-color: #b0c5dd;
+  background-color: white;
+  color: red;
   border: none;
   box-shadow: 5px 10px 18px #1b1b1b;
 }
@@ -69,5 +70,6 @@ input[type=button] {
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover {
-  background-color: #d5e2f0;
+  background-color: #6e0000;
+  color:white;
 }
