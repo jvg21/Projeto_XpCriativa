@@ -124,6 +124,8 @@ footer {
     min-width: 300px;
     border-color: #000;
     border-radius: 5px;
+    color: white;
+    box-shadow: 06px 05px;
     
   }
 
