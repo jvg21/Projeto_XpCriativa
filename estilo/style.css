@@ -37,13 +37,11 @@ header {
     background-color: #cc0000;
     color: #fdfdfd;
     padding: 30px 0;
-    
-    
+     
 }
 
 .logo {
     margin: 0;
-    
     
 }
 
@@ -53,7 +51,10 @@ header {
     font-size: 24px;
     
 }
-
+.logo img{
+  height: 100px;
+  position: relative;
+}
 nav {
     float: right;
     margin-top: 10px;
