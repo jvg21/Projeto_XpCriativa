@@ -34,12 +34,18 @@ header {
     display: flex;
     justify-content: left;
     align-items:center;
-    background-color: #cc0000;
+    background-color: #FF3131;
     color: #fdfdfd;
     padding: 30px 0;
+    height: 110px;
      
 }
 
+header img{
+  height: 100px;
+  position: relative;
+  margin-left: 10px;
+}
 .logo {
     margin: 0;
     
@@ -51,7 +57,7 @@ header {
     font-size: 24px;
     
 }
-.logo img{
+header img{
   height: 100px;
   position: relative;
 }
@@ -98,7 +104,7 @@ main p {
 }
 
 footer {
-    background-color: #cc0000;
+    background-color: #FF3131;
     color: #fff;
     text-align: center;
     padding: 20px 0;
