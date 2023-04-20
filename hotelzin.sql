@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `adm` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idfunc_UNIQUE` ON `adm` (`idfunc` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idfunc_UNIQUE` ON `adm` (`idfunc` ASC);
 
 SHOW WARNINGS;
 
@@ -49,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `cliente` (`idcliente` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `cliente` (`idcliente` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `cpf_UNIQUE` ON `cliente` (`cpf` ASC) VISIBLE;
+CREATE UNIQUE INDEX `cpf_UNIQUE` ON `cliente` (`cpf` ASC);
 
 SHOW WARNINGS;
 
@@ -76,13 +76,13 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `funcionario` (`idfuncionario` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `funcionario` (`idfuncionario` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `cpf_UNIQUE` ON `funcionario` (`cpf` ASC) VISIBLE;
+CREATE UNIQUE INDEX `cpf_UNIQUE` ON `funcionario` (`cpf` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `matricula_UNIQUE` ON `funcionario` (`matricula` ASC) VISIBLE;
+CREATE UNIQUE INDEX `matricula_UNIQUE` ON `funcionario` (`matricula` ASC);
 
 SHOW WARNINGS;
 
@@ -100,13 +100,13 @@ CREATE TABLE IF NOT EXISTS `quarto` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `num_quarto_UNIQUE` ON `quarto` (`num_quarto` ASC) VISIBLE;
+CREATE UNIQUE INDEX `num_quarto_UNIQUE` ON `quarto` (`num_quarto` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idquarto_UNIQUE` ON `quarto` (`idquarto` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idquarto_UNIQUE` ON `quarto` (`idquarto` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `tipo_quarto_UNIQUE` ON `quarto` (`tipo_quarto` ASC) VISIBLE;
+CREATE UNIQUE INDEX `tipo_quarto_UNIQUE` ON `quarto` (`tipo_quarto` ASC);
 
 SHOW WARNINGS;
 
@@ -129,16 +129,16 @@ CREATE TABLE IF NOT EXISTS `reserva` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idreserva_UNIQUE` ON `reserva` (`idreserva` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idreserva_UNIQUE` ON `reserva` (`idreserva` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `reserva` (`fk_idcliente` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idcliente_UNIQUE` ON `reserva` (`fk_idcliente` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idquarto_UNIQUE` ON `reserva` (`fk_idquarto` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idquarto_UNIQUE` ON `reserva` (`fk_idquarto` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idfuncionario_UNIQUE` ON `reserva` (`fk_idfuncionario` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idfuncionario_UNIQUE` ON `reserva` (`fk_idfuncionario` ASC);
 
 SHOW WARNINGS;
 
@@ -156,10 +156,10 @@ CREATE TABLE IF NOT EXISTS `tipo_quarto` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `idtipo_quarto_UNIQUE` ON `tipo_quarto` (`idtipo_quarto` ASC) VISIBLE;
+CREATE UNIQUE INDEX `idtipo_quarto_UNIQUE` ON `tipo_quarto` (`idtipo_quarto` ASC);
 
 SHOW WARNINGS;
-CREATE UNIQUE INDEX `nome_UNIQUE` ON `tipo_quarto` (`nome` ASC) VISIBLE;
+CREATE UNIQUE INDEX `nome_UNIQUE` ON `tipo_quarto` (`nome` ASC);
 
 SHOW WARNINGS;
 
