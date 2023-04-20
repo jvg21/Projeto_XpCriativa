@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <?php include 'menu.html'?>
+    <?php include 'menu.php'?>
 
     <main>
         <div class="container">
