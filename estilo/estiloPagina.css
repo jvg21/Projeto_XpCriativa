@@ -1,0 +1,61 @@
+.menu-pagina {
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    background-color: #FF3131;
+    color: #fdfdfd;
+    padding: 30px 0;
+    height: 110px;
+     
+}
+.button{
+    
+}
+.menu-pagina img{
+  height: 100px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.nav-menu {
+    float: right;
+    margin-top: 10px;
+   
+}
+
+.nav-menu ul {
+    list-style: none;
+    
+}
+
+.nav-menu ul li {
+    float: right;
+    /* display: inline-block; */
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu ul li a:hover {
+    color: #000;
+}
+
+.rodape-pagina {
+    background-color: #FF3131;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 200px;
+}
+.container-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}

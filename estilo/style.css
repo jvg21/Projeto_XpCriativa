@@ -30,62 +30,6 @@ body {
   display: block;
 }
 
-header {
-    display: flex;
-    justify-content: left;
-    align-items:center;
-    background-color: #FF3131;
-    color: #fdfdfd;
-    padding: 30px 0;
-    height: 110px;
-     
-}
-
-header img{
-  height: 100px;
-  position: relative;
-  margin-left: 10px;
-}
-.logo {
-    margin: 0;
-    
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    
-}
-header img{
-  height: 100px;
-  position: relative;
-}
-nav {
-    float: right;
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style: none;
-    
-}
-
-nav ul li {
-    float: right;
-    /* display: inline-block; */
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    color: #000;
-}
 
 main {
     padding: 50px 0;

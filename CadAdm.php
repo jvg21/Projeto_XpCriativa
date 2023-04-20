@@ -12,7 +12,7 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body>
-    <?php include 'menu.html'?>
+    <?php include 'menu.php'?>
 
     <div class="container">
         <form class="form-signup" action="form_action.php" method="GET">
