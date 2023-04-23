@@ -11,7 +11,7 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body onload="dataMax('data_nasc')">
-    <?php include 'menu.php'?>
+    <?php include './geral/menu.php'?>
     <div class="container">
         <form class="form-signup" action="form_action.php" method="GET">
             <h2>Registrar Hospede</h2>
@@ -73,7 +73,7 @@
         </form>
     </div>
      
-    <?php include 'rodape.html'?>
+    <?php include './geral/rodape.html'?>
     
             
     

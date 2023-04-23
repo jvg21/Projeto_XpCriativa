@@ -3,8 +3,8 @@
 
     <?php session_start();
        //s$_SESSION ['login'];
-       $_SESSION['Usuario'] = 'João';
-       $_SESSION['Nivel'] = 'Adm';
+    //    $_SESSION['Usuario'] = 'João';
+    //    $_SESSION['Nivel'] = 'Adm';
     ?>
     <img src="imagens/logo3.png">
     <div class="container-menu">

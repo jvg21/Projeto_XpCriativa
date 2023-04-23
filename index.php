@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <?php include 'menu.php'?>
+    <?php include './geral/menu.php'?>
 
     <main>
         <div class="container">
@@ -41,6 +41,6 @@
       </div>
       
 
-      <?php include 'rodape.html'?>
+      <?php include './geral/rodape.html'?>
 </body>
 </html>
