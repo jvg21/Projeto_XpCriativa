@@ -20,7 +20,10 @@
                 <li><a href="index.php">Home</a></li>
             </ul>
         </nav>
-        <?php
+       
+    </div>
+    <div class="menu-user">
+    <?php
             if(!isset($_SESSION ['login'])){ 
                 echo'<nav class="nav-menu"><ul>
                 <li><button type="button" class="btn btn-success btn-block">Cadastrar</button></li>

@@ -9,7 +9,11 @@
      
 }
 .button{
-    
+    margin-left: 5px;
+}
+.menu-user{
+    margin-right: 5px;
+    /* background-color: #fff; */
 }
 .menu-pagina img{
   height: 100px;
@@ -38,6 +42,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+
 }
 
 .nav-menu ul li a:hover {
