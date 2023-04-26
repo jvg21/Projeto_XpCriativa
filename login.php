@@ -7,16 +7,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="estilo/login.css">
+	<link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/form.css">
 </head>
 <body>
-	<div class="container">
-		<div class="form">
+	<?php include './geral/menu.php'?>
+	<div class="container-form">
+		<div class="form-signup">
 			<h2>Formulário de Login</h2>
-			<form>
+			<form action="login/LoginVerifica.php" method="POST">
 			<div class="form-group">
 				<label for="username">Usuário:</label>
-				<input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+				<input type="text" class="form-control" id="username" placeholder="Digite seu Email">
 			</div>
 			<div class="form-group">
 				<label for="password">Senha:</label>
@@ -27,4 +29,6 @@
 		</div>
 		
 	</div>
+	<?php include './geral/rodape.html'?>
 </body>
+</html>

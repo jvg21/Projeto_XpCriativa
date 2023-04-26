@@ -13,7 +13,7 @@
 <body onload="dataMax('data_nasc')">
     <?php include './geral/menu.php'?>
     <div class="container">
-        <form class="form-signup" action="form_action.php" method="GET">
+        <form class="form-signup" action="UserCrud/InsertUser.php" method="POST">
             <h2>Registrar Hospede</h2>
             <div class="form-group mb-2">
                 <div class="row">

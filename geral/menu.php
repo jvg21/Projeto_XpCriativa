@@ -26,8 +26,8 @@
     <?php
             if(!isset($_SESSION ['login'])){ 
                 echo'<nav class="nav-menu"><ul>
-                <li><button type="button" class="btn btn-success btn-block">Cadastrar</button></li>
-                    <li><button type="button" class="btn btn-success btn-block">Login</button></li>
+                <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>
+                <li><a type="button" href="./login.php" class="btn btn-success btn-block">Login</a></li>
                     
                 </ul></nav>';
 
