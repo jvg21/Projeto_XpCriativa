@@ -18,11 +18,11 @@
 			<form action="login/LoginVerifica.php" method="POST">
 			<div class="form-group">
 				<label for="username">Usuário:</label>
-				<input type="text" class="form-control" id="username" placeholder="Digite seu Email">
+				<input type="text" class="form-control" id="username" name="username" placeholder="Digite seu Email">
 			</div>
 			<div class="form-group">
 				<label for="password">Senha:</label>
-				<input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
 			</div>
 			<button type="submit" class="btn btn-primary">Enviar</button>
 			</form>

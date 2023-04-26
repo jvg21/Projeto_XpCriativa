@@ -1,8 +1,7 @@
 <header class='menu-pagina'>
     <link rel="stylesheet" href="estilo/estiloPagina.css">
 
-    <?php session_start();
-       //s$_SESSION ['login'];
+    <?php 
     //    $_SESSION['Usuario'] = 'João';
     //    $_SESSION['Nivel'] = 'Adm';
     ?>
@@ -24,6 +23,7 @@
     </div>
     <div class="menu-user">
     <?php
+    session_start();
             if(!isset($_SESSION ['login'])){ 
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>

@@ -1,7 +1,8 @@
 <?php
 $Usuario = $_POST["username"];
-$Senha = md5($_POST["Password"]);
-
+$Senha = $_POST["password"];
+$Senha = md5($Senha);
+echo $Usuario .$Senha;
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -17,19 +18,21 @@ if ($result = $conn->query($sql)) {
         $row = $result->fetch_assoc();
         $_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
         $_SESSION ['ID_Usuario']  = $row['idcliente'];
-        $_SESSION ['nome']        = $row['email'];
+        $_SESSION ['nome']        = $row['nome'];
         unset($_SESSION ['nao_autenticado']);
-        unset($_SESSION ['mensagem_header'] ); 
-        unset($_SESSION ['mensagem'] ); 
-        header('location: /ConsultorioLogin/medlistar.php'); // Redireciona para a página de funcionalidades.
-        exit();
+        // unset($_SESSION ['mensagem_header'] ); 
+        // unset($_SESSION ['mensagem'] ); 
+        echo 'sucesso';
+        //header('location: ../index.php'); // Redireciona para a página de funcionalidades.
+        //exit();
         
     }else{
         $_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
-        $_SESSION ['mensagem_header'] = "Login";
-        $_SESSION ['mensagem']        = "ERRO: Login ou Senha inválidos.";
-        header('location: /ConsultorioLogin/index.php'); // Redireciona para página inicial
-        exit();
+        // $_SESSION ['mensagem_header'] = "Login";
+        // $_SESSION ['mensagem']        = "ERRO: Login ou Senha inválidos.";
+        echo 'not sucesso';
+        ///header('location: ../index.php'); // Redireciona para página inicial
+        //exit();
     }
 }
 else {
