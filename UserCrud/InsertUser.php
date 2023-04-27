@@ -5,8 +5,9 @@ $Email = $_POST["email"];
 $Telefone = $_POST["telefone"];
 $Sexo = $_POST["Sexo"];
 $Data = $_POST["data_nasc"];
-$Senha = md5($_POST["password"]);
+$Senha = $_POST["password"];
 
+$Senha = $Senha;
 //echo $Cpf.$Email.$Telefone.$Sexo.$Data.$Senha
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
@@ -20,7 +21,13 @@ $sqlG = "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALU
 
 $result = $conn->query($sqlG);
 
-header('location: ../CadUser.php');
+
+session_start();
+$_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
+$_SESSION ['ID_Usuario']  = $row['idcliente'];
+$_SESSION ['nome']        = $row['nome'];
+$_SESSION ['Nivel']       = "CLIENTE";
+header('location: ../index.php');
 
 
 
