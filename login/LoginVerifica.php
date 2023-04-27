@@ -1,7 +1,7 @@
 <?php
 $Usuario = $_POST["username"];
 $Senha = $_POST["password"];
-$Senha = md5($Senha);
+$Senha = $Senha;
 echo $Usuario .$Senha;
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
@@ -16,14 +16,17 @@ $sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = '$Senha'";
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
         $row = $result->fetch_assoc();
+        session_start();
         $_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
         $_SESSION ['ID_Usuario']  = $row['idcliente'];
         $_SESSION ['nome']        = $row['nome'];
+        $_SESSION ['Nivel']       = "CLIENTE";
+
         unset($_SESSION ['nao_autenticado']);
         // unset($_SESSION ['mensagem_header'] ); 
         // unset($_SESSION ['mensagem'] ); 
-        echo 'sucesso';
-        //header('location: ../index.php'); // Redireciona para a página de funcionalidades.
+        echo 'sucesso'. $_SESSION['login'].$_SESSION['ID_Usuario'].$_SESSION['nome'];
+        header('location: ../index.php'); // Redireciona para a página de funcionalidades.
         //exit();
         
     }else{
