@@ -1,10 +1,5 @@
 <header class='menu-pagina'>
     <link rel="stylesheet" href="estilo/estiloPagina.css">
-
-    <?php 
-    //    $_SESSION['Usuario'] = 'João';
-    //    $_SESSION['Nivel'] = 'Adm';
-    ?>
     <img src="imagens/logo3.png">
     <div class="container-menu">
         <!-- <div class="logo">
@@ -24,6 +19,10 @@
     <div class="menu-user">
     <?php
     session_start();
+            // $horaLogin = now();
+
+            // echo $horaLogin;
+
             if(!isset($_SESSION ['login'])){ 
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>
@@ -32,7 +31,11 @@
                 </ul></nav>';
 
             }else{
-                echo'<nav class="nav-menu">'.$_SESSION['Nivel'].': '.$_SESSION['Usuario'].' </nav>';
+                echo'<nav class="nav-menu"><ul>
+                
+                <li><a type="button" href="login/logout.php" class="btn btn-success btn-block">Logout</a></li>
+                <li>Olá '.$_SESSION['nome'].': '.$_SESSION['Nivel'].'</li>
+                </ul> </nav>';
             }
         
         ?>
