@@ -22,7 +22,7 @@ if ($result = $conn->query($sql)) {
         $_SESSION ['nome']        = $row['nome'];
         $_SESSION ['Nivel']       = "CLIENTE";
 
-        unset($_SESSION ['nao_autenticado']);
+        //unset($_SESSION ['nao_autenticado']);
         // unset($_SESSION ['mensagem_header'] ); 
         // unset($_SESSION ['mensagem'] ); 
         echo 'sucesso'. $_SESSION['login'].$_SESSION['ID_Usuario'].$_SESSION['nome'];

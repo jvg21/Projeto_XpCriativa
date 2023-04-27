@@ -18,11 +18,17 @@
     </div>
     <div class="menu-user">
     <?php
-    session_start();
+    session_start();          // Ativa as variáveis de sessão
+    // $_SESSION ['ID_Usuario'] =0;
+    // $_SESSION ['nome'] =0;
+    // $_SESSION ['Nivel'] = '----';
             // $horaLogin = now();
 
             // echo $horaLogin;
-
+            if(isset($_SESSION['Pagina_Controlada'])){
+                unset($_SESSION['Pagina_Controlada']);
+                header("location: ./index.php");
+            }
             if(!isset($_SESSION ['login'])){ 
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>

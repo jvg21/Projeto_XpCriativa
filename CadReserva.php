@@ -11,7 +11,10 @@
 </head>
 <body>
 
-    <?php include './geral/menu.php'?>
+    <?php 
+    session_start();
+    $_SESSION['Pagina_Controlada'] = true;
+    include './geral/menu.php'?>
 
     <form class="form-signup" action="">
         <h2 class="h2-form">Agende sua hospedagem!</h2><br>

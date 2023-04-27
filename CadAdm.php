@@ -12,7 +12,10 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body>
-    <?php include './geral/menu.php'?>
+    <?php 
+    session_start();
+    $_SESSION['Pagina_Controlada'] = true;
+    include './geral/menu.php'?>
 
     <div class="container">
         <form class="form-signup" action="form_action.php" method="GET">

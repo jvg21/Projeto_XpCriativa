@@ -21,15 +21,12 @@ $sqlG = "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALU
 
 $result = $conn->query($sqlG);
 
-
 session_start();
-$_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
-$_SESSION ['ID_Usuario']  = $row['idcliente'];
-$_SESSION ['nome']        = $row['nome'];
+$_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
+//$_SESSION ['ID_Usuario']  = $row['idcliente'];
+$_SESSION ['nome']        = $Nome;
 $_SESSION ['Nivel']       = "CLIENTE";
+
 header('location: ../index.php');
-
-
-
 
 ?>

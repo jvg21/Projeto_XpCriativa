@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="estilo/form.css">
 </head>
 <body>
-	<?php include './geral/menu.php'?>
+	<?php
+	session_start();
+	 
+	include './geral/menu.php'?>
 	<div class="container-form">
 		<div class="form-signup">
 			<h2>Formulário de Login</h2>
