@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +11,7 @@
 </head>
 <body onload="dataMax('data_nasc')">
     <?php include './geral/menu.php'?>
+    
     <div class="container">
         <form class="form-signup" action="UserCrud/InsertUser.php" method="POST">
             <h2>Registrar Hospede</h2>

@@ -1,8 +1,5 @@
 <?php
-$Usuario = $_POST["username"];
-$Senha = $_POST["password"];
-$Senha = $Senha;
-echo $Usuario .$Senha;
+session_start();
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -11,14 +8,18 @@ if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
 
+$Usuario = $_POST["username"];
+$Senha = $_POST["password"];
+$Senha = $Senha;
+
 $sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = '$Senha'";
 
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
         $row = $result->fetch_assoc();
-        session_start();
+        
         $_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
-        $_SESSION ['ID_Usuario']  = $row['idcliente'];
+        //$_SESSION ['ID_Usuario']  = $row['idcliente'];
         $_SESSION ['nome']        = $row['nome'];
         $_SESSION ['Nivel']       = "CLIENTE";
 
