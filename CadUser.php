@@ -11,10 +11,7 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body onload="dataMax('data_nasc')">
-    <?php
-    session_start();
-    $_SESSION['Pagina_Controlada'] = true;
-     include './geral/menu.php'?>
+    <?php include './geral/menu.php'?>
     <div class="container">
         <form class="form-signup" action="UserCrud/InsertUser.php" method="POST">
             <h2>Registrar Hospede</h2>

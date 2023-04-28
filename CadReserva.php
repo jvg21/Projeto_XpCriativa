@@ -11,8 +11,7 @@
 </head>
 <body>
 
-    <?php 
-    session_start();
+    <?php
     $_SESSION['Pagina_Controlada'] = true;
     include './geral/menu.php'?>
 
