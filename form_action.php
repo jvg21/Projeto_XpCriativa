@@ -11,7 +11,7 @@
 
 <body>
     <script type="text/javascript" src="JS/formScript.js"></script>
-    <?php include 'menu.html'?>
+    <?php include './geral/menu.html'?>
     <div class="content">
 
 
@@ -32,7 +32,7 @@
         
 
     </div>
-    <?php include 'rodape.html'?>
+    <?php include './geral/rodape.html'?>
 </body>
 
 </html>

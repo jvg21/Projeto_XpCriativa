@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +10,10 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body onload="dataMax('data_nasc')">
-    <?php include 'menu.php'?>
+    <?php include './geral/menu.php'?>
+    
     <div class="container">
-        <form class="form-signup" action="form_action.php" method="GET">
+        <form class="form-signup" action="UserCrud/InsertUser.php" method="POST">
             <h2>Registrar Hospede</h2>
             <div class="form-group mb-2">
                 <div class="row">
@@ -73,7 +73,7 @@
         </form>
     </div>
      
-    <?php include 'rodape.html'?>
+    <?php include './geral/rodape.html'?>
     
             
     
