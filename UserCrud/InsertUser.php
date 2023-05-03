@@ -16,15 +16,32 @@ $Sexo = $_POST["Sexo"];
 $Data = $_POST["data_nasc"];
 $Senha = $_POST["password"];
 
-$sqlG= "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
-('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo','$Senha');";
+try{
+    $sql= "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
+    ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'));";
 
-$result = $conn->query($sql);
-$_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
-$_SESSION ['ID_Usuario']  = $row['idcliente'];
-$_SESSION ['nome']        = $Nome;
-$_SESSION ['Nivel']       = "CLIENTE";
+    $result = $conn->query($sql);
+    $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
+    $_SESSION ['ID_Usuario']  = $row['idcliente'];
+    $_SESSION ['nome']        = $Nome;
+    $_SESSION ['Nivel']       = "CLIENTE";
 
-header('location: ../index.php');
+    ?>
+    <script language="javascript" type="text/javascript">
+        alert("Cadastrado com Sucesso");
+        window.location.href = 'http://localhost/xp/Projeto_XpCriativa/';
+    </script>
+    <?php
+    //header('location: ../index.php');
+}
+catch(Exception $e) {
+    ?>
+    <script language="javascript" type="text/javascript">
+        alert("Erro ao cadastrar");
+        window.location.href = 'http://localhost/xp/Projeto_XpCriativa/CadUser.php';
+    </script>
+    <?php
+}
+
 
 ?>

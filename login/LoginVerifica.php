@@ -12,7 +12,7 @@ $Usuario = $_POST["username"];
 $Senha = $_POST["password"];
 $Senha = $Senha;
 
-$sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = '$Senha'";
+$sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = md5('$Senha')";
 
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
