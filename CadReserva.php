@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +13,9 @@
 <body>
 
     <?php
-    $_SESSION['Pagina_Controlada'] = true;
-    include './geral/menu.php'?>
+    include './geral/controle.php';
+    include './geral/menu.php';?>
+
     <div class="container">
         <form class="form-signup" action="">
             <h2 class="h2-form">Agende sua hospedagem!</h2><br>

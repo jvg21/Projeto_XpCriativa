@@ -19,7 +19,7 @@ if ($result = $conn->query($sql)) {
         $row = $result->fetch_assoc();
         
         $_SESSION ['login']       = $Usuario;           // Ativa as variáveis de sessão
-        //$_SESSION ['ID_Usuario']  = $row['idcliente'];
+        $_SESSION ['ID_Usuario']  = $row['idcliente'];
         $_SESSION ['nome']        = $row['nome'];
         $_SESSION ['Nivel']       = "CLIENTE";
 

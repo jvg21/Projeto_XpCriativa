@@ -16,12 +16,12 @@ $Sexo = $_POST["Sexo"];
 $Data = $_POST["data_nasc"];
 $Senha = $_POST["password"];
 
-$sqlG = "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
+$sqlG= "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
 ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo','$Senha');";
 
-$result = $conn->query($sqlG);
+$result = $conn->query($sql);
 $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
-//$_SESSION ['ID_Usuario']  = $row['idcliente'];
+$_SESSION ['ID_Usuario']  = $row['idcliente'];
 $_SESSION ['nome']        = $Nome;
 $_SESSION ['Nivel']       = "CLIENTE";
 

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +12,8 @@
 </head>
 <body>
     <?php 
-    session_start();
-    $_SESSION['Pagina_Controlada'] = true;
-    include './geral/menu.php'?>
+    include './geral/controle.php';
+    include './geral/menu.php';?>
 
     <div class="container">
         <form class="form-signup" action="form_action.php" method="GET">

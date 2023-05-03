@@ -1,6 +1,8 @@
 <header class='menu-pagina'>
-    <link rel="stylesheet" href="estilo/estiloPagina.css">
-    <img src="imagens/logo3.png">
+
+    <!-- <link rel="stylesheet" href="estilo/estiloPagina.css"> -->
+    <link rel="stylesheet" href="http://localhost/xp/Projeto_XpCriativa/estilo/estiloPagina.css">
+    <img src="http://localhost/xp/Projeto_XpCriativa/imagens/logo3.png">
     <div class="container-menu">
         <!-- <div class="logo">
             <h1><a href="#">Hotelzin</a></h1>
@@ -11,7 +13,7 @@
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="http://localhost/xp/Projeto_XpCriativa/">Home</a></li>
             </ul>
         </nav>
        
@@ -25,11 +27,12 @@
             // $horaLogin = now();
 
             // echo $horaLogin;
-            if(isset($_SESSION['Pagina_Controlada'])){
-                unset($_SESSION['Pagina_Controlada']);
-                header("location: ./index.php");
-            }
+            
             if(!isset($_SESSION ['login'])){ 
+                if(isset($_SESSION['Pagina_Controlada'])==true){
+                    unset($_SESSION['Pagina_Controlada']);
+                    header("location: ./index.php");
+                }
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>
                 <li><a type="button" href="./login.php" class="btn btn-success btn-block">Login</a></li>
