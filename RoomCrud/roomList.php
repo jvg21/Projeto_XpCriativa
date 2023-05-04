@@ -22,30 +22,33 @@
     </div>
     <!-- FIM -->
     <?php
-        // require '../BD/ConectaDB.php';
-        // $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
+        require '../BD/ConectaDB.php';
+        $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
-        // // Verifica conexão 
-        // if ($conn->connect_error) {
-        //     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
-        // }
-        // $sql = "SELECT * FROM tipo_quarto";
-        // $result = $conn->query($sql);
-        // if ($result->num_rows >0) {
-        //     while ($row = $result->fetch_assoc()) {
-        //         echo '<div class="container">
-        //         <div class="card red">
-        //             <img src="imagens/quarto1.jpg" h2>
-        //             <h2>'.$row['nome'].'</h2>
-        //             <p>Preço R$ '.$row['preco'].'</p>
-        //             <p>'.$row['descricao'].'</p>
-        //             <button class="button">Reserve aqui</button>
-        //         </div></div>';
-        //     }
+        // Verifica conexão 
+        if ($conn->connect_error) {
+            die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
+        }
+        $sql = "SELECT * FROM tipo_quarto";
+        $result = $conn->query($sql);
+        if ($result->num_rows >0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="container">
+                <div class="card red">
+                    <img src="imagens/quarto1.jpg" h2>
+                    <h2>'.$row['nome'].'</h2>
+                    <p>Preço R$ '.$row['preco'].'</p>
+                    <p>'.$row['descricao'].'</p>
+                    <form id="cod">
+                        <input type = "hidden" name="idquarto" value = '.$row["id"].'>
+                    </form>
+                    <button class="button" onclick="gravar_reserva()">Reserve aqui</button>
+                </div></div>';
+            }
 
-        // }else{
-        //     echo  $conn-> error;
-        // }
+        }else{
+            echo  $conn-> error;
+        }
             
     ?>
     <?php include '../geral/rodape.html'?>

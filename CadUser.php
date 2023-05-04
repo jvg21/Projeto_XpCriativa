@@ -56,7 +56,8 @@
             <div class="form-group mb-2">
                 <input  type="password" class="form-control"  id="password" name="password" placeholder="Senha*"required maxlength="15" autocomplete="off" onchange="confirmaSenha()"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,15}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 6 até 15 caracteres.">
-                <input type="checkbox" onclick="MostrarSenha('password')"> Mostrar Senha
+                <input name="checkSenha" type="checkbox" onclick="MostrarSenha('password')"> 
+                <label for="checkSenha">Mostrar Senha</label>
             </div>
             
             <div class="form-group mb-2">

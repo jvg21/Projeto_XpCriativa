@@ -12,7 +12,7 @@ $Usuario = $_POST["username"];
 $Senha = $_POST["password"];
 $Senha = $Senha;
 
-$sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = '$Senha'";
+$sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = MD5('$Senha')";
 
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
@@ -23,20 +23,22 @@ if ($result = $conn->query($sql)) {
         $_SESSION ['nome']        = $row['nome'];
         $_SESSION ['Nivel']       = "CLIENTE";
 
-        //unset($_SESSION ['nao_autenticado']);
-        // unset($_SESSION ['mensagem_header'] ); 
-        // unset($_SESSION ['mensagem'] ); 
-        echo 'sucesso'. $_SESSION['login'].$_SESSION['ID_Usuario'].$_SESSION['nome'];
-        header('location: ../index.php'); // Redireciona para a página de funcionalidades.
-        //exit();
+
+        ?>
+        <script language="javascript" type="text/javascript">
+            alert("Logado com Sucesso");
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/';
+        </script>
+        <?php
         
     }else{
         $_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
-        // $_SESSION ['mensagem_header'] = "Login";
-        // $_SESSION ['mensagem']        = "ERRO: Login ou Senha inválidos.";
-        echo 'not sucesso';
-        ///header('location: ../index.php'); // Redireciona para página inicial
-        //exit();
+        ?>
+        <script language="javascript" type="text/javascript">
+            alert("Usuário ou Senha incorreto");
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/login.php';
+        </script>
+        <?php
     }
 }
 else {
