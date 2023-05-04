@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roomlist com Bootstrap</title>
+    <meta charset="UTF-8">
+    <!-- Inclusão do Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+      .room {
+        margin: 20px auto;
+        max-width: 500px;
+      }
+      
+      .room-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      
+      .room-desc {
+        margin-top: 20px;
+      }
+      
+      .room-price {
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Estrutura do Roomlist -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 room">
+          <img class="room-img" src="imagens/quarto1.jpg" alt="Quarto">
+          <div class="room-desc">
+            <h2>Quarto Padrão</h2>
+            <p>Quarto amplo com cama king size, TV de tela plana, frigobar e ar condicionado.</p>
+            <div class="room-price">R$ 324,00 por noite</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Inclusão do Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
