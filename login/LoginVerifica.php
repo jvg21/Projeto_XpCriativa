@@ -11,9 +11,10 @@ if ($conn->connect_error) {
 $Usuario = $_POST["username"];
 $Senha = $_POST["password"];
 $Senha = $Senha;
-
+//echo $Senha;
 $sql = "SELECT * FROM cliente WHERE email = '$Usuario' AND senha = MD5('$Senha')";
-
+// echo $sql;
+// die();
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
         $row = $result->fetch_assoc();
