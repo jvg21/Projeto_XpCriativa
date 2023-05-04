@@ -9,6 +9,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/form.css">
+	<script src="JS/formScript.js" defer></script>
 	<title>Hotelzin - Login</title>
 </head>
 <body>
@@ -25,6 +26,8 @@
 				<label for="password">Senha:</label>
 				<input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
 			</div>
+			<input name="checkSenha" type="checkbox" onclick="MostrarSenha('password')"> 
+            <label for="checkSenha">Mostrar Senha</label><br/>
 			<button type="submit" class="btn btn-primary">Enviar</button>
 			</form>
 		</div>
