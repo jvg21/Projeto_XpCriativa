@@ -43,7 +43,7 @@
                 echo'<nav class="nav-menu"><ul>
                 
                 <li><a type="button" href="login/logout.php" class="btn btn-success btn-block">Logout</a></li>
-                <li>Olá '.$_SESSION['nome'].': '.$_SESSION['Nivel'].'</li>
+                <li>Bem Vindo '.$_SESSION['nivel'].': '.$_SESSION['nome'].'</li>
                 </ul> </nav>';
             }
         

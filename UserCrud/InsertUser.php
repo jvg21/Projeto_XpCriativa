@@ -24,7 +24,7 @@ try{
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
     $_SESSION ['ID_Usuario']  = $row['idcliente'];
     $_SESSION ['nome']        = $Nome;
-    $_SESSION ['Nivel']       = "CLIENTE";
+    $_SESSION ['Nivel']       = "Cliente";
 
     ?>
     <script language="javascript" type="text/javascript">

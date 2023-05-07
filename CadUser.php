@@ -39,18 +39,18 @@
                 onkeydown="return mascaraTelefone(event)" title="(xx) xxxxx-xxxx" pattern="\(\d{2}\)\s\d{4,5}-\d{4}$">
             </div>
             <div class="form-group mb-2">
-                <Label for="Sexo">Sexo*</Label>
-                <select name="Sexo" required>
-                    <option value="">---------</option>
+                <!-- <Label for="Sexo">Sexo*</Label> -->
+                <select name="Sexo" required  class="form-select" aria-label="Default select example">
+                    <option value="">Sexo*</option>
                     <option value="Masculino">Masculino</option>
-                    <option value="Feminino">Feminino</option>=
+                    <option value="Feminino">Feminino</option>
 
                 </select>
                
             </div>
             <div class="form-group mb-2">
-                <label for="data_nasc">Data de Nascimento*: </label>
-                <input type="date" id="data_nasc" name="data_nasc" required autocomplete="off" min="1930-01-01"
+                <label for="data_nasc">Data de Nascimento* </label>
+                <input type="date" class="form-control" id="data_nasc" name="data_nasc" required autocomplete="off" min="1930-01-01"
                 pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" >
             </div>
             <div class="form-group mb-2">

@@ -10,7 +10,7 @@
    
 </head>
 <body>
-    <?php include './geral/menu.php'?>
+    <?php include './geral/menu.php';?>
 
     <main>
         <div class="container">
