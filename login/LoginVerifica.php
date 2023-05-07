@@ -8,13 +8,16 @@ if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
 
-$Usuario = $_POST["username"];
-$Senha = $_POST["password"];
-$Senha = $Senha;
-//echo $Senha;
+try{
+    $Usuario = $_POST["username"];
+    $Senha = $_POST["password"];
+
+}catch(Exception $e){
+    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
+    redirect();
+}
 $sql = "SELECT * FROM usuario WHERE email = '$Usuario' AND senha = MD5('$Senha')";
-// echo $sql;
-// die();
+
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
         $row = $result->fetch_assoc();

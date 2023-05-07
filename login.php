@@ -13,7 +13,10 @@
 	<title>Hotelzin - Login</title>
 </head>
 <body>
-	<?php include './geral/menu.php'?>
+	<?php 
+	include './geral/menu.php';
+	redirect_if_login();
+	?>
 	<div class="container">
 		<div class="form-signup">
 			<h2>Formulário de Login</h2>

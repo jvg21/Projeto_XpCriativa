@@ -20,19 +20,15 @@
     </div>
     <div class="menu-user">
     <?php
-    session_start();          // Ativa as variáveis de sessão
-    // $_SESSION ['ID_Usuario'] =0;
-    // $_SESSION ['nome'] =0;
-    // $_SESSION ['Nivel'] = '----';
-            // $horaLogin = now();
 
-            // echo $horaLogin;
+    session_start(); 
+    include 'controle.php';
             
             if(!isset($_SESSION ['login'])){ 
-                if(isset($_SESSION['Pagina_Controlada'])==true){
-                    unset($_SESSION['Pagina_Controlada']);
-                    header("location: ./index.php");
-                }
+                // if(isset($_SESSION['Pagina_Controlada'])==true){
+                //     unset($_SESSION['Pagina_Controlada']);
+                //     header("location: ./index.php");
+                // }
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>
                 <li><a type="button" href="./login.php" class="btn btn-success btn-block">Login</a></li>

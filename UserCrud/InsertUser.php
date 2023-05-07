@@ -8,13 +8,19 @@ if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
 
-$Nome = $_POST["firstname"]." ".$_POST["lastname"];
-$Cpf = $_POST["cpf"];
-$Email = $_POST["email"];
-$Telefone = $_POST["telefone"];
-$Sexo = $_POST["Sexo"];
-$Data = $_POST["data_nasc"];
-$Senha = $_POST["password"];
+try{
+    $Nome = $_POST["firstname"]." ".$_POST["lastname"];
+    $Cpf = $_POST["cpf"];
+    $Email = $_POST["email"];
+    $Telefone = $_POST["telefone"];
+    $Sexo = $_POST["Sexo"];
+    $Data = $_POST["data_nasc"];
+    $Senha = $_POST["password"];
+}catch(Exception $e){
+    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
+    redirect();
+}
+
 
 try{
     $sql= "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 

@@ -13,8 +13,10 @@
 <body>
 
     <?php
-    include './geral/controle.php';
-    include './geral/menu.php';?>
+    include './geral/menu.php';
+    if(!isset($_SESSION['login'])){
+        header('Location: http://localhost/xp/Projeto_XpCriativa/');
+    }?>
 
     <div class="container">
         <form class="form-signup" action="">
