@@ -14,9 +14,8 @@
 
     <?php
     include './geral/menu.php';
-    if(!isset($_SESSION['login'])){
-        header('Location: http://localhost/xp/Projeto_XpCriativa/');
-    }?>
+    redirect_if_not_login();
+    ?>
 
     <div class="container">
         <form class="form-signup" action="">
