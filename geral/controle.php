@@ -15,11 +15,11 @@ function redirect_if_login(){
 }
 function redirect_if_not_adm(){
     if(isset($_SESSION['nivel'])){
-        if($_SESSION['nivel'] != "ADM"){
-            header('Location: http://localhost/xp/Projeto_XpCriativa/');
+        if($_SESSION['nivel'] == "ADM"){
+            return 0;
         }
 	}
-    return 0;
+    header('Location: http://localhost/xp/Projeto_XpCriativa/');
 }
 function redirect(){
     header('Location: http://localhost/xp/Projeto_XpCriativa/');
