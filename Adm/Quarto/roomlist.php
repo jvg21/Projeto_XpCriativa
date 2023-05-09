@@ -2,8 +2,9 @@
     <thead>
         <tr>
             <th scope="col" colspan="6">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meuModal">
-                    <img src="../imagens/iconeMais.svg"> Inserir Novo Quarto
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inserirQuartoModal">
+                <img src="../imagens/iconeMais.svg">
+                    Inserir Quarto
                 </button>
             </th>
 
@@ -28,7 +29,7 @@
             if ($conn->connect_error) {
                 die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
             }
-            $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto";
+            $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto ORDER BY num_quarto";
             $result = $conn->query($sql);
 
             if ($result->num_rows >0) {

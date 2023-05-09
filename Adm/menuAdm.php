@@ -20,8 +20,9 @@
             <?php include 'Quarto/roomList.php';?>
         </div>
         <div class="modal-teste">
-        <?php include 'Quarto/roomInsert.php';?>
+            <?php include 'Quarto/roomInsert.php';?>
         </div>
+
     </div>
     
     <?php include '../geral/rodape.html'?>
