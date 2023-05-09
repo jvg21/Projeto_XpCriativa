@@ -1,7 +1,12 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col" colspan="6"><button><img src="../imagens/iconeMais.svg"> Inserir Novo Quarto</button></th>
+            <th scope="col" colspan="6">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meuModal">
+                    <img src="../imagens/iconeMais.svg"> Inserir Novo Quarto
+                </button>
+            </th>
+
         </tr>
         <br/>
         <tr>
@@ -33,8 +38,8 @@
                         <td>'.$row['num_quarto'].'</td>
                         <td>'.$row['nome'].'</td>
                         <td>R$ '.$row['preco'].'</td>
-                        <td><button><img src="../imagens/iconeEdit.svg"></button></td>
-                        <td><button><img src="../imagens/iconeLixo.svg"></button></td>
+                        <td><button type="button"><img src="../imagens/iconeEdit.svg"></button></td>
+                        <td><button type="button"><img src="../imagens/iconeLixo.svg"></button></td>
                     </tr>';
                 }
             }else{
