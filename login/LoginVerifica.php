@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../geral/controle.php';
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -13,7 +13,6 @@ try{
     $Senha = $_POST["password"];
 
 }catch(Exception $e){
-    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
 }
 $sql = "SELECT * FROM usuario WHERE email = '$Usuario' AND senha = MD5('$Senha')";
@@ -44,8 +43,9 @@ if ($result = $conn->query($sql)) {
         //$_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
         ?>
         <script language="javascript" type="text/javascript">
-            //window.location.href = 'http://localhost/xp/Projeto_XpCriativa/login.php';
+            
             alert("Usuário ou Senha incorreto");
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/login.php';
             
         </script>
         <?php

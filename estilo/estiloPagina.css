@@ -1,3 +1,4 @@
+
 .menu-pagina {
     display: flex;
     justify-content: left;
@@ -51,6 +52,9 @@
 }
 
 .rodape-pagina {
+    position:relative;
+    bottom: 0;
+    width: 100%;
     background-color: #FF3131;
     color: #fff;
     text-align: center;

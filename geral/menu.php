@@ -1,6 +1,7 @@
 <header class='menu-pagina'>
 
     <!-- <link rel="stylesheet" href="estilo/estiloPagina.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://localhost/xp/Projeto_XpCriativa/estilo/estiloPagina.css">
     <img src="http://localhost/xp/Projeto_XpCriativa/imagens/logo3.png">
     <div class="container-menu">
@@ -20,8 +21,6 @@
     </div>
     <div class="menu-user">
     <?php
-
-    session_start(); 
     include 'controle.php';
             
             if(!isset($_SESSION ['login'])){ 
@@ -38,7 +37,7 @@
             }else{
                 echo'<nav class="nav-menu"><ul>
                 
-                <li><a type="button" href="login/logout.php" class="btn btn-success btn-block">Logout</a></li>
+                <li><a type="button" href="http://localhost/xp/Projeto_XpCriativa/login/logout.php" class="btn btn-success btn-block">Logout</a></li>
                 <li>Bem Vindo '.$_SESSION['nivel'].': '.$_SESSION['nome'].'</li>
                 </ul> </nav>';
             }
