@@ -28,38 +28,43 @@ CREATE TABLE IF NOT EXISTS `adm` (
   CONSTRAINT `fk_adm_usuario1` FOREIGN KEY (`fk_idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela hotelzin.adm: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela hotelzin.adm: ~2 rows (aproximadamente)
 INSERT INTO `adm` (`idadm`, `fk_idusuario`) VALUES
-	(12, 1),
-	(13, 2),
-	(11, 36);
+	(1, 1),
+	(2, 2);
 
 -- Copiando estrutura para tabela hotelzin.quarto
 CREATE TABLE IF NOT EXISTS `quarto` (
   `idquarto` int(11) NOT NULL AUTO_INCREMENT,
   `num_quarto` int(11) NOT NULL,
   `fk_tipo_quarto` int(11) NOT NULL,
+  `ativado` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`idquarto`),
   UNIQUE KEY `num_quarto_UNIQUE` (`num_quarto`),
   KEY `Quarto_TipoQuarto` (`fk_tipo_quarto`) USING BTREE,
   CONSTRAINT `Quarto_TipoQuarto` FOREIGN KEY (`fk_tipo_quarto`) REFERENCES `tipo_quarto` (`idtipo_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela hotelzin.quarto: ~13 rows (aproximadamente)
-INSERT INTO `quarto` (`idquarto`, `num_quarto`, `fk_tipo_quarto`) VALUES
-	(25, 1, 1),
-	(26, 2, 1),
-	(27, 3, 1),
-	(28, 4, 1),
-	(29, 5, 1),
-	(30, 6, 2),
-	(31, 7, 2),
-	(32, 8, 2),
-	(33, 9, 3),
-	(34, 10, 3),
-	(35, 11, 3),
-	(36, 12, 4),
-	(37, 13, 4);
+-- Copiando dados para a tabela hotelzin.quarto: ~18 rows (aproximadamente)
+INSERT INTO `quarto` (`idquarto`, `num_quarto`, `fk_tipo_quarto`, `ativado`) VALUES
+	(25, 777, 2, 1),
+	(26, 2, 1, 0),
+	(27, 3, 1, 0),
+	(28, 4, 1, 0),
+	(29, 555, 4, 1),
+	(30, 6, 2, 1),
+	(31, 7, 2, 1),
+	(32, 8, 2, 1),
+	(33, 9, 3, 1),
+	(34, 10, 3, 1),
+	(35, 11, 3, 1),
+	(36, 12, 4, 1),
+	(37, 13, 4, 1),
+	(42, 205, 4, 1),
+	(43, 250, 2, 1),
+	(44, 260, 3, 1),
+	(45, 100, 4, 1),
+	(46, 140, 4, 1);
 
 -- Copiando estrutura para tabela hotelzin.reserva
 CREATE TABLE IF NOT EXISTS `reserva` (
