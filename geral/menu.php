@@ -34,12 +34,15 @@
                 echo'<nav class="nav-menu"><ul>
                 <li><a type="button"  href="./CadUser.php" class="btn btn-success btn-block">Cadastrar</a></li>
                 <li><a type="button" href="./login.php" class="btn btn-success btn-block">Login</a></li>
-                    
                 </ul></nav>';
 
             }else{
-                echo'<nav class="nav-menu"><ul>
-                
+                echo'<nav class="nav-menu"><ul>';
+                if($_SESSION['nivel'] == "ADM"){
+                    echo '<li><a type="button" href="http://localhost/xp/Projeto_XpCriativa/ADM/menuAdm.php" class="btn btn-success btn-block">MENU ADM</a></li>';
+
+                }
+                echo'
                 <li><a type="button" href="http://localhost/xp/Projeto_XpCriativa/login/logout.php" class="btn btn-success btn-block">Logout</a></li>
                 <li>Bem Vindo '.$_SESSION['nivel'].': '.$_SESSION['nome'].'</li>
                 </ul> </nav>';
