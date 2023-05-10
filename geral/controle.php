@@ -1,4 +1,5 @@
 <?php
+// todas as paginas redirecionam para a pagina inicial
 session_start(); 
 function redirect_if_not_login(){
     if(!isset($_SESSION['login'])){
