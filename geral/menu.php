@@ -1,5 +1,6 @@
 <header class='menu-pagina'>
-
+    
+    <!-- PARTE INICIAL DE CIMA, OQUE ESTÁ EM VERMELHO -->
     <!-- <link rel="stylesheet" href="estilo/estiloPagina.css"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
