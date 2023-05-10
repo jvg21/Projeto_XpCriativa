@@ -48,7 +48,7 @@ if ($cont == TRUE){
         ?>
         <script language="javascript" type="text/javascript">
             alert('Cadastro de quarto feito com sucesso');
-            // window.location.href = 'http://localhost/xp/Projeto_XpCriativa/Adm/menuAdm.php';
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/Adm/menuAdm.php';
         </script>
         <?php
     }catch(Exception $e){
@@ -56,7 +56,7 @@ if ($cont == TRUE){
         ?>
         <script language="javascript" type="text/javascript">
             alert('Cadastro de quarto falhou');
-            // window.location.href = 'http://localhost/xp/Projeto_XpCriativa/Adm/menuAdm.php';
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/Adm/menuAdm.php';
         </script>
         <?php
     }

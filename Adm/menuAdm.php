@@ -25,6 +25,6 @@
 
     </div>
     
-    <?php include '../geral/rodape.html'?>
+    <?php include '../geral/rodape.html';?>
 </body>
 </html>
