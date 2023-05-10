@@ -29,8 +29,12 @@ body {
 .break-line {
   display: block;
 }
-
-
+.cards{
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+/* 
 main {
     padding: 50px 0;
 }
@@ -45,15 +49,15 @@ main p {
     font-size: 24px;
     text-align: center;
     margin-bottom: 50px;
-}
+} */
 
-footer {
+/* footer {
     background-color: #FF3131;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 200px;
-}
+} */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -61,8 +65,8 @@ footer {
     
   }
 
-  .card {
-    /* width: 30%; */
+  /* .card {
+
     height: 400px;
     max-width: 800px;
     padding: 20px;
@@ -100,8 +104,8 @@ footer {
     margin: auto;
     max-width: 100%;
     border: 1px solid white;
-}
-
+} */
+/* 
   .card h2 {
     font-size: 24px;
     margin: 10px 0;
@@ -113,8 +117,8 @@ footer {
     line-height: 1.4;
     margin: 0;
     text-align: center;
-  }
-.button {
+  } */
+/* .button {
   background-color: blue;
   color: white;
   border: none;
@@ -127,7 +131,7 @@ footer {
 }
 .button:hover{
   background-color: darkblue;
-}
+} */
 .Titulo{
   color: red;
   width: 100%;
