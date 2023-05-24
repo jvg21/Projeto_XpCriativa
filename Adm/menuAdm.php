@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilo/crud.css">
     
-    <!-- <script src="../JS/crudAdm.js" defer></script> -->
+    <script src="../JS/crudAdm.js" defer></script>
     <title>Hotelzin - Agendar Quarto</title>
     
 </head>
@@ -19,9 +19,17 @@
         <div class="lista-quartos">
             <?php include 'Quarto/roomList.php';?>
         </div>
+        <div class="lista-tipo-quartos">
+            <?php include 'TipoQuarto/TroomList.php';?>
+        </div>
+
         <div class="modal-teste">
             <?php include 'Quarto/roomInsert.php';?>
         </div>
+        <div class="modal-teste">
+            <?php include 'TipoQuarto/TroomInsert.php';?>
+        </div>
+
 
     </div>
     

@@ -28,7 +28,7 @@ try{
 
     $result = $conn->query($sql);
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
-    $_SESSION ['ID_Usuario']  = $row['idcliente'];
+   // $_SESSION ['ID_Usuario']  = $row['idcliente'];
     $_SESSION ['nome']        = $Nome;
     $_SESSION ['Nivel']       = "Cliente";
 
