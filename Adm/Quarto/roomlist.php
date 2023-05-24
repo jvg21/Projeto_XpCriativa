@@ -29,6 +29,10 @@
             if ($conn->connect_error) {
                 die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
             }
+            $SqlInativo = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  
+            quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto where quarto.ativado=0 	ORDER BY num_quarto";
+            $resultI = $conn->query($SqlInativo);
+
             $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  
             quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto where quarto.ativado=1 	ORDER BY num_quarto";
             $result = $conn->query($sql);
@@ -44,7 +48,22 @@
                         <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
                         <td><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
                     </tr>';
+
+                    
                 }
+                if ($resultI->num_rows >0) {
+                    while ($rowI = $resultI->fetch_assoc()) {
+                        echo'<tr>
+                        <th scope="row">'.$rowI['idquarto'].'</th>
+                        <td>'.$rowI['num_quarto'].'</td>
+                        <td>'.$rowI['nome'].'</td>
+                        <td>R$ '.$rowI['preco'].'</td>
+                        
+                        <td><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>
+                    </tr>';
+                    // <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
+
+                    }}
             }else{
                 echo'<tr>
                         <th scope="row"></th>
