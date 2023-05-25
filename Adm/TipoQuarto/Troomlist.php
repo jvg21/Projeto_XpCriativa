@@ -15,8 +15,8 @@
             <th scope="col">Tipo Quarto</th>
             <th scope="col">Preço</th>
             <th scope="col">Descrição</th>
+            <th scope="col"></th>
             <th scope="col">Alterar</th>
-            <th scope="col">Excluir</th>
         </tr>
     </thead>
     <tbody>
@@ -40,9 +40,11 @@
                         <td>'.$row['nome'].'</td>
                         <td>R$ '.$row['preco'].'</td>
                         <td>'.$row['descricao'].'</td>
-                        <td><a href="./Quarto/TroomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
-                        <td><a href="./Quarto/TroomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
+                        <td></td>
+                        <td><a href="./TipoQuarto/TroomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
+                        
                     </tr>';
+                    // <td><a href="./Quarto/TroomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
                 }
             }else{
                 echo'<tr>

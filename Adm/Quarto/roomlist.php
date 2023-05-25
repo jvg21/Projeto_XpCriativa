@@ -52,13 +52,25 @@
                     
                 }
                 if ($resultI->num_rows >0) {
+                    echo '<table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Número Quarto</th>
+                            <th scope="col">Tipo Quarto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col"></th>
+                            <th scope="col">Reativar</th>
+                        </tr>
+                    </thead>
+                    <tbody>';
                     while ($rowI = $resultI->fetch_assoc()) {
                         echo'<tr>
                         <th scope="row">'.$rowI['idquarto'].'</th>
                         <td>'.$rowI['num_quarto'].'</td>
                         <td>'.$rowI['nome'].'</td>
                         <td>R$ '.$rowI['preco'].'</td>
-                        
+                        <td></td>
                         <td><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>
                     </tr>';
                     // <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
