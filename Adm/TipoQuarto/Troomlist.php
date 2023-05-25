@@ -40,9 +40,10 @@
                         <td>'.$row['nome'].'</td>
                         <td>R$ '.$row['preco'].'</td>
                         <td>'.$row['descricao'].'</td>
-                        <td><a href="./Quarto/TroomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
-                        <td><a href="./Quarto/TroomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
+                        <td><a href="./TipoQuarto/TroomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
+                        
                     </tr>';
+                    // <td><a href="./Quarto/TroomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
                 }
             }else{
                 echo'<tr>
