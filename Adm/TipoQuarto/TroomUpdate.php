@@ -31,7 +31,7 @@
     <div class="container">
     <form method="POST" action="roomUpdateEXE.php">
     <!-- <fieldset disabled> -->
-            <legend>Alterar Quarto</legend>
+            <legend>Alterar Tipo Quarto</legend>
             <?php 
                     // Verifica conexão 
                     $sql = "SELECT * FROM tipo_quarto WHERE idtipo_quarto = $id";
