@@ -9,7 +9,9 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body onload="dataMax('data_nasc')">
-    <?php include './geral/menu.php'?>
+    <?php include './geral/menu.php';
+    
+    //echo $_SESSION['login'];?>
     
     <div class="container">
         <form class="form-signup" action="UserCrud/AlterUser.php" method="POST">
