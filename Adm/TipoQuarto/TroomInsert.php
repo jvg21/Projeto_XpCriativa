@@ -11,7 +11,7 @@
         </div>
         <div class="modal-body">
 
-          <form action="Quarto/roomInsertEXE.php" method="POST">
+          <form action="TipoQuarto/TroomInsertEXE.php" method="POST">
             <div class="mb-3">
               <label for="nomeT" class="form-label">Nome</label>
               <input type="text" class="form-control" id="nomeT" name="nomeT" required>
