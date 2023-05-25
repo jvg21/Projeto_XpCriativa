@@ -16,7 +16,7 @@
     <main>
         <div class="container">
             <h1 class="Titulo">Colecione bons momentos com a gente!</h1>
-            <p><mark>Os melhores quartos com os melhores preços.</mark></p>
+            <h6 class="frase1">Os melhores quartos com os melhores preços.</h6>
         </div>
     </main>
 
