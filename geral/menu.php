@@ -43,6 +43,7 @@
 
                 }
                 echo'
+                <li><a type="button"  href="./AltUser.php" class="btn btn-success btn-block">Alterar Dados</a></li>
                 <li><a type="button" href="http://localhost/xp/Projeto_XpCriativa/login/logout.php" class="btn btn-success btn-block">Logout</a></li>
                 <li>Bem Vindo '.$_SESSION['nivel'].': '.$_SESSION['nome'].'</li>
                 </ul> </nav>';

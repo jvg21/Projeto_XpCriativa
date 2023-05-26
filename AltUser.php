@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/form.css">
     <script src="JS/formScript.js" defer></script>
-    <title>Hotelzin - Cadastro</title>
+    <title>Hotelzin - Update</title>
 </head>
 <body>
     <?php 
