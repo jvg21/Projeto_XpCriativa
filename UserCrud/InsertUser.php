@@ -30,7 +30,7 @@ try{
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
    // $_SESSION ['ID_Usuario']  = $row['idcliente'];
     $_SESSION ['nome']        = $Nome;
-    $_SESSION ['Nivel']       = "Cliente";
+    $_SESSION ['nivel']       = "CLIENTE";
 
     ?>
     <script language="javascript" type="text/javascript">
