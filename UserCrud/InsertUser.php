@@ -23,7 +23,7 @@ try{
 
 
 try{
-    $sql= "INSERT INTO cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
+    $sql= "INSERT INTO $DATABASE.cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
     ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'));";
 
     $result = $conn->query($sql);

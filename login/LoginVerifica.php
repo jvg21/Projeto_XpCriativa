@@ -1,6 +1,6 @@
 <?php
 include '../geral/controle.php';
-require '../BD/ConectaDB.php';
+include '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
 // // Verifica conexão  se houve um erro na conexão com o banco de dados
@@ -16,7 +16,7 @@ try{
     redirect();
 }
 //  realiza uma consulta no banco de dados para verificar se há um usuário com o nome de usuário e senha fornecidos
-$sql = "SELECT * FROM usuario WHERE email = '$Usuario' AND senha = MD5('$Senha')";
+$sql = "SELECT * FROM $DATABASE.usuario WHERE email = '$Usuario' AND senha = MD5('$Senha')";
 
 if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
