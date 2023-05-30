@@ -23,8 +23,8 @@ try{
 
 
 try{
-    $sql= "INSERT INTO $DATABASE.cliente (nome,cpf,email,telefone,data_nasc,sexo,senha) VALUES 
-    ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'));";
+    $sql= "INSERT INTO $DATABASE.usuario (nome,cpf,email,telefone,data_nasc,sexo,senha,foto) VALUES 
+    ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),NULL);";
 
     $result = $conn->query($sql);
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
@@ -38,14 +38,15 @@ try{
         window.location.href = 'http://localhost/xp/Projeto_XpCriativa/';
     </script>
     <?php
-    //header('location: ../index.php');
 }
 catch(Exception $e) {
+    echo $e;
     ?>
-    <script language="javascript" type="text/javascript">
+    
+    <!-- <script language="javascript" type="text/javascript">
         alert("Erro ao cadastrar");
         window.location.href = 'http://localhost/xp/Projeto_XpCriativa/CadUser.php';
-    </script>
+    </script> -->
     <?php
 }
 
