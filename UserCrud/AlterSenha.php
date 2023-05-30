@@ -11,10 +11,18 @@ if ($conn->connect_error) {
 // Recebe a senha do banco e armazena em $Senha
 $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
 $result = $conn->query($SQL);
-if ($result->num_rows >0) {
+if ($result->num_rows == 1) {
     while ($row = $result->fetch_assoc()) {
         $Senha = $row['senha'];
     }
+}else{
+    // echo $e;
+    ?>
+    <script language="javascript" type="text/javascript">
+        alert("Erro ao reconhecer Usuário ");
+        window.location.href = 'http://localhost/xp/Projeto_XpCriativa/AltSenha.php';
+    </script>
+    <?php
 }
 
 // Recebe os inputs do formulário
@@ -37,7 +45,7 @@ try{
     
         $result = $conn->query($sql);
         
-        $_SESSION ['senha']       = $NovaSenha;
+        //$_SESSION ['senha']       = $NovaSenha;
 
     }
 

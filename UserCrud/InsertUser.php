@@ -43,10 +43,10 @@ catch(Exception $e) {
     echo $e;
     ?>
     
-    <!-- <script language="javascript" type="text/javascript">
+    <script language="javascript" type="text/javascript">
         alert("Erro ao cadastrar");
         window.location.href = 'http://localhost/xp/Projeto_XpCriativa/CadUser.php';
-    </script> -->
+    </script>
     <?php
 }
 
