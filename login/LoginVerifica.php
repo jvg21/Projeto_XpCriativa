@@ -22,7 +22,8 @@ if ($result = $conn->query($sql)) {
     if ($result->num_rows == 1) {         // Deu match: login e senha combinaram
         $row = $result->fetch_assoc();
         
-        $_SESSION ['login']       = $Usuario;          
+        $_SESSION ['login']       = $Usuario;   
+        $_SESSION ['senha']       = $Senha;       
         //$_SESSION ['ID_Usuario']  = $row['idcliente'];
         $_SESSION ['nome']        = $row['nome'];
         $sql = "SELECT * FROM adm WHERE fk_idusuario = ".$row['idusuario']." ";
