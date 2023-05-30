@@ -5,7 +5,13 @@
 }
 
 nav{
-    background-color: #333;
+    background-color: #33333317;
+    position: fixed;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    
+    
 }
 
 nav li{
@@ -20,7 +26,7 @@ nav li a{
 }
 
 nav li a:hover{
-    background-color: red;
+    background-color: #1d1b1b17;
 }
 
 .dropdown-menu{
