@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../estilo/crud.css"> -->
     
-    <script src="../../JS/crudAdm.js" defer></script>
+    <script src="/JS/crudAdm.js" defer></script>
     <title>Hotelzin - Desativar Quarto</title>
     
 </head>

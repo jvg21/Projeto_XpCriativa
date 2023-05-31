@@ -6,7 +6,7 @@
     <!-- <link rel="stylesheet" href="../../estilo/crud.css"> -->
     
     <script src="/JS/crudAdm.js" defer></script>
-    <title>Hotelzin - Alterar Quarto</title>
+    <title>Hotelzin - Desativar Quarto</title>
     
 </head>
 <body>
@@ -29,16 +29,16 @@
         ?>
     
     <div class="container">
-    <form method="POST" action="roomUpdateEXE.php">
+    <form method="POST" action="roomActivateEXE.php">
     <!-- <fieldset disabled> -->
-            <legend>Alterar Quarto</legend>
+            <legend>Desativar Quarto</legend>
             <?php 
                     // Verifica conexão 
                     $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto 
                     WHERE quarto.idquarto = $id ORDER BY num_quarto";
                     $result = $conn->query($sql);
 
-                    if ($result->num_rows == 1) {
+                    if ($result->num_rows ==1) {
                         while ($row = $result->fetch_assoc()) {
                             //$cod = $row['idquarto'];
                             echo '
@@ -48,23 +48,12 @@
                             </div>
                             <div class="mb-3">
                                 <label for="disabledTextInput" class="form-label">Número Quarto: </label>
-                                <input type="number" name="num-quarto" id="disabledTextInput" class="form-control" value="'.$row['num_quarto'].'" placeholder="Número Quarto">
+                                <input type="number" id="disabledTextInput" class="form-control" value='.$row['num_quarto'].' placeholder="Disabled input"readonly>
                             </div>
                             <div class="mb-3">
-                                <label for="opcoes" class="form-label">Tipo: </label>
-                                <select id="opcoes" name="opcoes" class="form-select" >
-                                    <option value="'.$row['idtipo_quarto'].'" selected >Tipo do Quarto: '.$row['nome'].' Preço: '.$row['preco'].'</option>';
-                                $sqlQ = "SELECT * FROM tipo_quarto";
-                                $result_tipos = $conn->query($sqlQ);
-                        
-                                while ($rowo = $result_tipos->fetch_assoc()){
-                                    if($row['idtipo_quarto']!=$rowo['idtipo_quarto']){
-                                        echo "<option value='".$rowo['idtipo_quarto']."'>Tipo do Quarto: ".$rowo['nome']." Preço: ".$rowo['preco']."</option>";
-                                    }
-                                    
-                                } 
-                                
-                            echo'        
+                                <label for="disabledSelect" class="form-label">Tipo: </label>
+                                <select id="disabledSelect" class="form-select" readonly>
+                                    <option value='.$row['idtipo_quarto'].'>Tipo do Quarto: '.$row['nome'].' Preço: '.$row['preco'].'</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -80,7 +69,7 @@
             <!-- </fieldset> -->
             <!-- <a  class="btn btn-primary" href="../menuAdm.php">Voltar</a> -->
             <button type="button" onclick=voltarMenuAdm() class="btn btn-primary">Voltar</button>
-            <button type="submit" class="btn btn-primary">Alterar</button>
+            <button type="submit" class="btn btn-primary">Ativar</button>
         
         </form>
 

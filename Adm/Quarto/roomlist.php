@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th scope="col" colspan="6">
@@ -16,7 +16,7 @@
             <th scope="col">Tipo Quarto</th>
             <th scope="col">Preço</th>
             <th scope="col">Alterar</th>
-            <th scope="col">Excluir</th>
+            <th scope="col">Ativar/Desativar</th>
         </tr>
     </thead>
     <tbody>
@@ -29,53 +29,39 @@
             if ($conn->connect_error) {
                 die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
             }
-            $SqlInativo = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  
-            quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto where quarto.ativado=0 	ORDER BY num_quarto";
-            $resultI = $conn->query($SqlInativo);
+            
 
-            $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON  
-            quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto where quarto.ativado=1 	ORDER BY num_quarto";
+            $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON                                            
+            quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto	ORDER BY ativado DESC,idquarto";
             $result = $conn->query($sql);
 
             if ($result->num_rows >0) {
                 while ($row = $result->fetch_assoc()) {
                     $cod = $row['idquarto'];
-                    echo'<tr>
-                        <th scope="row">'.$row['idquarto'].'</th>
-                        <td>'.$row['num_quarto'].'</td>
-                        <td>'.$row['nome'].'</td>
-                        <td>R$ '.$row['preco'].'</td>
-                        <td class="icone"><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
-                        <td class="icone"><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
-                    </tr>';
+                        if ($row['ativado']==1){
+                            echo'
+                            <tr>
+                                <th scope="row">'.$row['idquarto'].'</th>
+                                <td>'.$row['num_quarto'].'</td>
+                                <td>'.$row['nome'].'</td>
+                                <td>R$ '.$row['preco'].'</td>
+                                <td class="icone"><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
+                                <td class="icone"><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>';
+                        }else{
+                           echo' 
+                           <tr class="table-secondary">
+                            <th scope="row">'.$row['idquarto'].'</th>
+                            <td>'.$row['num_quarto'].'</td>
+                            <td>'.$row['nome'].'</td>
+                            <td>R$ '.$row['preco'].'</td>
+                            <td></td>
+                            <td class="icone"><a href="./Quarto/roomActivate.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>';
+                        }
+                    echo' </tr>';
 
                     
                 }
-                if ($resultI->num_rows >0) {
-                    echo '<table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">Número Quarto</th>
-                            <th scope="col">Tipo Quarto</th>
-                            <th scope="col">Preço</th>
-                            <th scope="col"></th>
-                            <th scope="col">Reativar</th>
-                        </tr>
-                    </thead>
-                    <tbody>';
-                    while ($rowI = $resultI->fetch_assoc()) {
-                        echo'<tr>
-                        <th scope="row">'.$rowI['idquarto'].'</th>
-                        <td>'.$rowI['num_quarto'].'</td>
-                        <td>'.$rowI['nome'].'</td>
-                        <td>R$ '.$rowI['preco'].'</td>
-                        <td></td>
-                        <td class="icone"><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>
-                    </tr>';
-                    // <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
-
-                    }}
+                
             }else{
                 echo'<tr>
                         <th scope="row"></th>

@@ -35,8 +35,8 @@
                         echo'
                         <a href="#">Fazer Reserva</a>
                         <a href="#">Minhas Reservas</a>
-                        <a href="http://localhost/xp/Projeto_XpCriativa/login/AltUser.php">Meus Dados</a>
-                        <a href="http://localhost/xp/Projeto_XpCriativa/login/AltSenha.php">Trocar Senha</a>
+                        <a href="http://localhost/xp/Projeto_XpCriativa/AltUser.php">Meus Dados</a>
+                        <a href="http://localhost/xp/Projeto_XpCriativa/AltSenha.php">Trocar Senha</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/login/logout.php">Logout</a>
                         </div>
                     </li>';

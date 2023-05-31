@@ -11,6 +11,7 @@
 </head>
 <body>
     <?php
+        //error_reporting(0);	
         include '../geral/menu.php';
         redirect_if_not_adm();?>
  
@@ -39,6 +40,5 @@
 
     </div>
     
-    <?php include '../geral/rodape.html';?>
 </body>
 </html>
