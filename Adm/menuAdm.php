@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo/crud.css">
+    <link rel="stylesheet" href="Css/crud.css">
     
-    <script src="../JS/crudAdm.js" defer></script>
+    <script src="JS/crudAdm.js" defer></script>
     <title>Hotelzin - Agendar Quarto</title>
     
 </head>
@@ -15,13 +15,12 @@
         redirect_if_not_adm();?>
  
     <div class="Nav">
-    
-        <li><a href="#quartos" onclick="trocarCrud()">Quartos</a></li>    
+        
+        <li><a href="#quartos" onclick="trocarCrud1()">Quartos</a></li>    
         <li><a href="#ModeloQuartos" onclick="trocarCrud2()">Modelo de Quartos</a></li>
     </div>
     
     <div class="container">
-        
         
         <div class="lista-quartos" id="lista-quartos">
             <?php include 'Quarto/roomList.php';?>

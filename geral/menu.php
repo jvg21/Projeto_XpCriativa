@@ -7,14 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Menu</title>
-    <link rel="stylesheet" href="estilo/menuCss.css">
+    <link rel="stylesheet" href="http://localhost/xp/Projeto_XpCriativa/geral/Css/menuCss.css">
 </head>
 <body>
-
     <nav>
-        
         <ul>
-            
             <?php
             include 'controle.php';
                 if(!isset($_SESSION ['login'])){ 
@@ -34,12 +31,10 @@
                             echo'
                             <a href="http://localhost/xp/Projeto_XpCriativa/Adm/menuAdm.php">Menu Adm</a>';
                             
-                        }//else{
-                            
-                        // }
-
-                            
+                        }     
                         echo'
+                        <a href="#">Fazer Reserva</a>
+                        <a href="#">Minhas Reservas</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/login/AltUser.php">Meus Dados</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/login/AltSenha.php">Trocar Senha</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/login/logout.php">Logout</a>

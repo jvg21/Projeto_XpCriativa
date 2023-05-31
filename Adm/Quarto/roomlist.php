@@ -45,8 +45,8 @@
                         <td>'.$row['num_quarto'].'</td>
                         <td>'.$row['nome'].'</td>
                         <td>R$ '.$row['preco'].'</td>
-                        <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
-                        <td><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
+                        <td class="icone"><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
+                        <td class="icone"><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
                     </tr>';
 
                     
@@ -71,7 +71,7 @@
                         <td>'.$rowI['nome'].'</td>
                         <td>R$ '.$rowI['preco'].'</td>
                         <td></td>
-                        <td><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>
+                        <td class="icone"><a href="./Quarto/roomDelete.php?id='.$cod.'"><img src="../imagens/recycle.svg"></a></td>
                     </tr>';
                     // <td><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
 
