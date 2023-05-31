@@ -1,3 +1,35 @@
+
 .lista-quartos{
     display: block;
+}
+.lista-tipo-quartos{
+    display: none;
+}
+.Nav {
+    float: left;
+    width: 100%;
+    background: #000000;
+    opacity: 100%;
+    top: 110px;
+}
+
+.Nav li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    list-style: none;
+}
+
+.Nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.Nav a:hover {
+    background: rgb(46, 91, 224);
+    color: #000000;
 }
