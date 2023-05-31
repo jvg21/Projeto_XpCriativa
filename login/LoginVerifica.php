@@ -7,7 +7,6 @@ $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
-
 try{
     $Usuario = $_POST["username"];
     $Senha = $_POST["password"];
@@ -24,11 +23,10 @@ if ($result = $conn->query($sql)) {
         
         $_SESSION ['login']       = $Usuario;   
         $_SESSION ['senha']       = $Senha;       
-        //$_SESSION ['ID_Usuario']  = $row['idcliente'];
         $_SESSION ['nome']        = $row['nome'];
         $sql = "SELECT * FROM adm WHERE fk_idusuario = ".$row['idusuario']." ";
         $resultAdm = $conn->query($sql);
-        //verifica se o usuário é um administrador ou um cliente
+        
         if($resultAdm->num_rows == 1){
             $_SESSION['nivel'] = "ADM";
         }else{
