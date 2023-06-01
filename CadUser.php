@@ -12,9 +12,14 @@
     <?php include './geral/menu.php'?>
     
     <div class="container">
-        <form class="form-signup" action="UserCrud/InsertUser.php" method="POST">
+        <form class="form-signup" action="UserCrud/InsertUser.php" method="POST" enctype="multipart/form-data">
             <h2>Registrar Hospede</h2>
             <div class="form-group mb-2">
+            <div class="col-md-6">
+                <p style="text-align:center"><label class="w3-btn w3-theme">Selecione uma Imagem</label>
+                <input type="hidden" name="MAX_FILE_SIZE" value="16777215" />
+                <input type="file" id="imagem" name="imagem" accept="imagem/*" onchange="validaImagem(this);">
+            </div>
                 <div class="row">
                     <div class="col-md-6">
                         <input type="text" class="form-control"  name="firstname" placeholder="Nome*" required 

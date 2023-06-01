@@ -23,8 +23,15 @@ try{
 
 
 try{
-    $sql= "INSERT INTO $DATABASE.usuario (nome,cpf,email,telefone,data_nasc,sexo,senha,foto) VALUES 
-    ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),NULL);";
+
+    if ($_FILES['imagem']['size'] == 0) { 
+        $sql= "INSERT INTO $DATABASE.usuario (nome,cpf,email,telefone,data_nasc,sexo,senha,foto) VALUES 
+        ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),NULL);";
+    } else {                             
+        $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name'])); // Atribui a foto a uma variavel
+        $sql= "INSERT INTO $DATABASE.usuario (nome,cpf,email,telefone,data_nasc,sexo,senha,foto) VALUES 
+        ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),'$imagem');";
+    }
 
     $result = $conn->query($sql);
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão
