@@ -1,10 +1,12 @@
 <?php
-try{
-    $num = $_POST['numero'];
-    $id_tipo = $_POST['opcoes'];
-}catch(Exception $e){
+
+if(!isset($_POST['numero']) || !isset($_POST['opcoes'])){
     include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
+    exit();
+}else{
+    $numero = $_POST['numero'];
+    $id_tipo = $_POST['opcoes'];
 }
 // echo $num.$id_tipo;
 require '../../BD/ConectaDB.php';
