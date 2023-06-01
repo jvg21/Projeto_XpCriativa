@@ -20,8 +20,7 @@
         </div>
     </main>
 
-    <?php include 'rl.html';
-    ?>
+    <?php include 'rl.html';?>
       <?php include './geral/rodape.html';?>
 </body>
 </html>

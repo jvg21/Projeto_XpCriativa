@@ -1,10 +1,10 @@
 <?php
-try{
-    $id = $_POST['id-quarto'];
-    
-}catch(Exception $e){
+   
+if(!isset($_POST['id-quarto'])){
     include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
+}else{
+    $id = $_POST['id-quarto'];
 }
 // echo $id;
 require '../../BD/ConectaDB.php';

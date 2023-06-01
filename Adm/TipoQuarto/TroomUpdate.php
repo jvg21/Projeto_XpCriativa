@@ -29,7 +29,7 @@
         ?>
     
     <div class="container">
-    <form method="POST" action="roomUpdateEXE.php">
+    <form method="POST" action="TroomUpdateEXE.php">
     <!-- <fieldset disabled> -->
             <legend>Alterar Quarto</legend>
             <?php 
