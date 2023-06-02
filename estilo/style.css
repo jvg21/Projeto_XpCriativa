@@ -8,7 +8,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0dbdb;
     color: #020202;
-    background-image: url('../imagens/hotelzin.jpg');
     max-width: 100%;
     height: auto;
     background-size: cover;
@@ -24,6 +23,18 @@ body {
     text-align: center
     
     
+}
+.imagem {
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logos{
+  position: absolute; 
+	left: -10vh; /* posiciona a 90px para a esquerda */ 
+	top: 5px; /* posiciona a 70px para baixo */
+
 }
 
 .break-line {

@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-color: #610000;
+    background-image: linear-gradient(to right, rgb(75, 101, 248) , rgb(12, 9, 182));
     /* background-color: #33333317; */
     height: 75px;
     position: relative;

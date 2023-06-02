@@ -12,6 +12,12 @@
 </head>
 <body>
     <?php include './geral/menu.php';?>
+    <div class="imagem">
+        <img src="imagens/teste1.jpg" width="100%" height="560" />
+    </div>
+    <div class="logos">
+        <img src="imagens/logo.png" width="350" height="250" />
+    </div>
 
     <main>
         <div class="container">
