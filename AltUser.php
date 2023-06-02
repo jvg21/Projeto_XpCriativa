@@ -14,7 +14,6 @@
     require 'BD/ConectaDB.php';
     $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
     $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
-    // echo $SQL;
     $result = $conn->query($SQL);
     if ($result->num_rows >0) {
         while ($row = $result->fetch_assoc()) {
