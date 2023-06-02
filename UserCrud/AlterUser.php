@@ -19,9 +19,17 @@ try{
 
 try{
     $Login = $_SESSION['login'];
-    $sql= "UPDATE $DATABASE.usuario 
-           SET email = '$Email', telefone = '$Telefone'
-           WHERE email = '$Login';";
+
+    if ($_FILES['imagem']['size'] == 0) { 
+        $sql= "UPDATE $DATABASE.usuario 
+        SET email = '$Email', telefone = '$Telefone'
+        WHERE email = '$Login';";
+    } else {                             
+        $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name'])); // Atribui a foto a uma variavel
+        $sql= "UPDATE $DATABASE.usuario 
+        SET email = '$Email', telefone = '$Telefone', foto = '$imagem'
+        WHERE email = '$Login';";
+    }
 
     $result = $conn->query($sql);
     $_SESSION ['login']       = $Email;           // Ativa as variáveis de sessão

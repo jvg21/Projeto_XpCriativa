@@ -22,15 +22,20 @@
             $Email = $row['email'];
             $Telefone = $row['telefone'];
             $Senha = $row['senha'];
+            $Foto = $row['foto'];
+            
         }
     }
    
     ?>
     
     <div class="container">
-        <form class="form-signup" action="UserCrud/AlterUser.php" method="POST">
+        <form class="form-signup" action="UserCrud/AlterUser.php" method="POST" enctype="multipart/form-data">
             <h2>Alterar cadastro</h2>
             <div class="form-group mb-2">
+                <?php echo '<img src="data:image;base64,'.base64_encode($Foto).'">'; ?>
+                <input type="hidden" name="MAX_FILE_SIZE" value="16777215" />
+                <input type="file" id="imagem" name="imagem" accept="imagem/*" onchange="validaImagem(this);">
             </div>
             <div class="form-group mb-2">
                 <input value="<?= $Email;?>" type="email" class="form-control"  name="email" placeholder="Email" autocomplete="off">
