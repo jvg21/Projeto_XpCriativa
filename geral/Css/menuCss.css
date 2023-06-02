@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-image: linear-gradient(to right, rgb(75, 101, 248) , rgb(12, 9, 182));
+    background-image: linear-gradient(to right, rgb(75, 101, 248) , rgba(9, 7, 133, 0.849));
     /* background-color: #33333317; */
     height: 75px;
     position: relative;
