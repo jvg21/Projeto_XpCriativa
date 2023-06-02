@@ -37,6 +37,12 @@ body {
 
 }
 
+/* /* .estrelas{
+  position: absolute; 
+	left: -10vh; /* posiciona a 90px para a esquerda */ 
+	/* top: 50px; /* posiciona a 70px para baixo */
+
+
 .break-line {
   display: block;
 }
@@ -144,7 +150,7 @@ main p {
   background-color: darkblue;
 } */
 .Titulo{
-  color: #808080;
+  color: #292828;
   width: 100%;
   font-weight: bold;
   text-align: center;
