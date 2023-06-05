@@ -32,8 +32,9 @@ body {
 
 .logos{
   position: absolute; 
-	left: -10vh; /* posiciona a 90px para a esquerda */ 
-	top: 5px; /* posiciona a 70px para baixo */
+	left: -8vh; /* posiciona a 90px para a esquerda */ 
+	top: -8vh; /* posiciona a 70px para baixo */
+
 
 }
 
