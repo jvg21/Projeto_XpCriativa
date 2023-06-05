@@ -14,13 +14,32 @@
         <ul>
             <?php
             include 'controle.php';
+            if(isset($_SESSION['login'])){
+                
+                require 'BD/ConectaDB.php';
+                $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
+                $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
+                $result = $conn->query($SQL);
+                if ($result->num_rows >0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $Foto = $row['foto'];
+                        
+                    }
+                }
+            }
+            
                 if(!isset($_SESSION ['login'])){ 
                     echo '<li><a href="http://localhost/xp/Projeto_XpCriativa/login.php" class="btn btn-outline-light">Login</a></li>';
                     echo '<li><a href="http://localhost/xp/Projeto_XpCriativa/CadUser.php" class="btn btn-outline-light">Cadastre-se</a></li.';
                 }else{
                     echo'<li>
-                            <div>
-                                <i class="fas fa-user usuario-logado"></i>
+                            <div>';
+                            if ($Foto == null) {
+                                echo '<i class="fas fa-user usuario-logado"></i>';
+                            } else {
+                                echo '<i><img style="border-radius: 50%; width:6vh;" src="data:image;base64,'.base64_encode($Foto).'"></i>';
+                            }
+                            echo '
                                 <span>Bem Vindo '.$_SESSION['nivel'].', '.$_SESSION["nome"].'</span>
                             </div>
                         </li>
