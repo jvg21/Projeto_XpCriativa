@@ -16,7 +16,7 @@
             include 'controle.php';
             if(isset($_SESSION['login'])){
                 
-                require 'BD/ConectaDB.php';
+                include 'http://localhost/xp/Projeto_XpCriativa/BD/ConectaDB.php';
                 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
                 $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
                 $result = $conn->query($SQL);
