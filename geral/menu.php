@@ -11,7 +11,12 @@
 </head>
 <body>
     <nav>
+        <!-- <div class="logos">
+            <img src="imagens/logo.png" class="img-fluid" height="80vh" width="0vh"/> 
+        </div> -->
+
         <ul>
+        
             <?php
             include 'controle.php';
                 if(!isset($_SESSION ['login'])){ 

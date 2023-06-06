@@ -15,9 +15,7 @@
     <div class="imagem">
         <img src="imagens/teste1.jpg" width="100%" height="560" />
     </div>
-    <div class="logos">
-        <img src="imagens/logo.png" class="img-fluid" width="53%" height="10%" />
-    </div>
+    
     <!-- <div class="estrela">
         <img src="imagens/5est.relas.png/" widhth ="350" height="100"/>
     </div> -->
