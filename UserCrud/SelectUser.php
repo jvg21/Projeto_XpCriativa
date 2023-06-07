@@ -11,6 +11,8 @@
 </head>
 <body>
     <?php include '../geral/menu.php';
+    include '../BD/ConectaDB.php';
+    ////fazer o select
     
     
     
