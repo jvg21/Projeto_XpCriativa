@@ -31,7 +31,7 @@ nav li a{
 }
 
 nav li a:hover{
-    background-color: #610000;
+    background-color: rgba(9, 7, 133);
     color: white;
     /* background-color: #1d1b1b17; */
 }
