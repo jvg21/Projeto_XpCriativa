@@ -21,7 +21,7 @@
     </thead>
     <tbody>
         
-        <?php
+        <?php//********************Listagem************************** */
             require '../BD/ConectaDB.php';
             $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -29,12 +29,14 @@
             if ($conn->connect_error) {
                 die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
             }
-            $sql = "SELECT * FROM tipo_quarto";
+            $sql = "SELECT * FROM tipo_quarto";//SELECT campos FROM nome_tabela
             $result = $conn->query($sql);
 
             if ($result->num_rows >0) {
                 while ($row = $result->fetch_assoc()) {
-                    $cod = $row['idtipo_quarto'];
+                    $cod = $row['idtipo_quarto'];//
+                    //****echo '$row['quartos']';
+                    //    echo '$row['nomedocamponobd']';*/
                     echo'<tr>
                         <th scope="row">'.$row['idtipo_quarto'].'</th>
                         <td>'.$row['nome'].'</td>
@@ -46,7 +48,8 @@
                     </tr>';
                     // <td><a href="./Quarto/TroomDelete.php?id='.$cod.'"><img src="../imagens/iconeLixo.svg"></a></td>
                 }
-            }else{
+            }//***************************Somente se não houver registros************************************************//
+            else{
                 echo'<tr>
                         <th scope="row"></th>
                         <td></td>
