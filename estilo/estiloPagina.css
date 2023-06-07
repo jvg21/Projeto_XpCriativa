@@ -55,7 +55,8 @@
     position:relative;
     bottom: 0;
     width: 100%;
-    background-color: #FF3131;
+    background-color: rgba(9, 7, 133, 0.849);
+    background-image: linear-gradient(to left, rgb(75, 101, 248) , rgba(9, 7, 133, 0.849));
     color: #fff;
     text-align: center;
     padding: 20px 0;

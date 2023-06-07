@@ -12,6 +12,7 @@
     <?php include './geral/menu.php'?>
     
     <div class="container">
+                                  <!--pasta onde está o php  -->
         <form class="form-signup" action="UserCrud/InsertUser.php" method="POST" enctype="multipart/form-data">
             <h2>Registrar Hospede</h2>
             <div class="form-group mb-2">
@@ -54,9 +55,11 @@
             </div>
             <div class="form-group mb-2">
                 <label for="data_nasc">Data de Nascimento* </label>
-                <input type="date" class="form-control" id="data_nasc" name="data_nasc" required autocomplete="off" min="1930-01-01"
+                <input type="date" class="form-control" id="data_nasc" name="data_nasc" required autocomplete="off" min="1920-01-01"
                 pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" >
             </div>
+            <!--   SENHAS  -->
+
             <div class="form-group mb-2">
                 <input  type="password" class="form-control"  id="password" name="password" placeholder="Senha*"required maxlength="15" autocomplete="off" onchange="confirmaSenha()"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,15}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 6 até 15 caracteres.">
@@ -73,6 +76,8 @@
                     Eu aceito o <a href="#">Termos de uso</a> & <a href="">Termos de Privacidade</a>
                 </label>
             </div>
+
+            
             <input type="reset" class="btn btn-success btn-block" value="Apagar">
             <input type="submit" class="btn btn-success btn-block" name="" value="Enviar" >
         </form>
