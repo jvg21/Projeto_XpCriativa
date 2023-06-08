@@ -20,7 +20,7 @@
             <?php
             include 'controle.php';
             if(isset($_SESSION['login'])){
-                //echo $_SERVER['DOCUMENT_ROOT'];
+                //echo $_SERVER['DOCUMENT_ROOT'] http://localhost/xp/Projeto_XpCriativa/BD/ConectaDB.php;
                 
                 require $_SERVER['DOCUMENT_ROOT'].'/xp/Projeto_XpCriativa/BD/ConectaDB.php';
                 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
@@ -32,6 +32,7 @@
                         
                     }
                 }
+                $conn->close();
             }
             
                 if(!isset($_SESSION ['login'])){ 
