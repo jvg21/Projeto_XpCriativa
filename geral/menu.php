@@ -18,11 +18,16 @@
         <ul>
         
             <?php
+           
             include 'controle.php';
+            
             if(isset($_SESSION['login'])){
-                //echo $_SERVER['DOCUMENT_ROOT'] http://localhost/xp/Projeto_XpCriativa/BD/ConectaDB.php;
+                                
+                $LOCALDB = "localhost:3306";
+                $USER = "root";
+                $PASS = "";
+                $DATABASE = "hotelzin";
                 
-                require $_SERVER['DOCUMENT_ROOT'].'/xp/Projeto_XpCriativa/BD/ConectaDB.php';
                 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
                 $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
                 $result = $conn->query($SQL);
