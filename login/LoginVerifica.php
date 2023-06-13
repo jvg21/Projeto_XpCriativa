@@ -7,13 +7,15 @@ $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
-try{
+if(isset($_POST['username'])&&isset($_POST['password'])){
     $Usuario = $_POST["username"];
     $Senha = $_POST["password"];
-
-}catch(Exception $e){
-    redirect();
 }
+else{
+    redirect();
+
+}
+
 //  realiza uma consulta no banco de dados para verificar se há um usuário com o nome de usuário e senha fornecidos
 $sql = "SELECT * FROM $DATABASE.usuario WHERE email = '$Usuario' AND senha = MD5('$Senha')";
 
@@ -33,9 +35,15 @@ if ($result = $conn->query($sql)) {
             $_SESSION ['nivel'] = "Cliente";
         }
         ?>
+        <style>
+            body{
+                background-image: url("../imagens/fundo.jpg");
+            }
+
+        </style>
+        <?php sleep(200);?>
         <script language="javascript" type="text/javascript">
-            // exibe um alerta para o usuário, informando que o login foi bem-sucedido
-            // window.location.href = 'http://localhost/xp/Projeto_XpCriativa/index.php';
+           
             alert("Logado com Sucesso");
             window.location.replace("http://localhost/xp/Projeto_XpCriativa/index.php");
         </script>
@@ -45,6 +53,8 @@ if ($result = $conn->query($sql)) {
         //$_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
         ?>
         <script language="javascript" type="text/javascript">
+            
+
             
             alert("Usuário ou Senha incorreto");
             window.location.href = 'http://localhost/xp/Projeto_XpCriativa/login.php';
@@ -56,8 +66,4 @@ if ($result = $conn->query($sql)) {
 else {
     echo "Erro ao acessar o BD: " . $conn ->error;
 }
-
-
-
-
 ?>
