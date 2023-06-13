@@ -39,7 +39,7 @@ if ($result = $conn->query($sql)) {
         <script language="javascript" type="text/javascript">
            
             location.replace("http://localhost/xp/Projeto_XpCriativa/index.php");
-            sleep(200);
+
         </script>
         <?php
         
@@ -47,8 +47,6 @@ if ($result = $conn->query($sql)) {
         //$_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
         ?>
         <script language="javascript" type="text/javascript">
-            
-
             
             alert("Usuário ou Senha incorreto");
             window.location.href = 'http://localhost/xp/Projeto_XpCriativa/login.php';
