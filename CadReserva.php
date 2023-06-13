@@ -9,7 +9,10 @@
     <title>Hotelzin - Reserva</title>
 </head>
 <body>
-    <?php include './geral/menu.php'?>
+    <?php include './geral/menu.php';
+    redirect_if_not_login();
+    
+    ?>
     
     <div class="container">
         <form class="form-signup" action="reservaCrud/ReservaExe.php" method="POST" enctype="multipart/form-data">

@@ -15,7 +15,7 @@
     include './geral/menu.php';?>
 
     <div class="container">
-        <form class="form-signup" action="form_action.php" method="GET">
+        <form class="form-signup" action="#" method="GET">
             <h2>Registrar Administrador</h2>
             <div class="form-group mb-2">
                 <input type="text" class="form-control"  name="usuario" placeholder="Nome de Usuário*" required

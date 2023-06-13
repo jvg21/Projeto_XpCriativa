@@ -11,6 +11,7 @@
 <body>
     <?php 
     include './geral/menu.php';
+    redirect_if_not_login();
     require 'BD/ConectaDB.php';
     $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
     $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";

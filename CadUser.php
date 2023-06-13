@@ -9,7 +9,7 @@
     <title>Hotelzin - Cadastro</title>
 </head>
 <body onload="dataMax('data_nasc')">
-    <?php include './geral/menu.php'?>
+    <?php include './geral/menu.php';?>
     
     <div class="container">
                                   <!--pasta onde está o php  -->
