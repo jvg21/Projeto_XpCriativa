@@ -72,7 +72,7 @@ try{
     <?php
 }
 catch(Exception $e) {
-    echo $e;
+    // echo $e;
     ?>
     <script language="javascript" type="text/javascript">
         alert("Erro ao cadastrar");
