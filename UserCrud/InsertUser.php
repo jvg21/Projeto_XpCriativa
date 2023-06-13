@@ -1,12 +1,6 @@
 <?php 
 session_start();
-require '../BD/ConectaDB.php';//**ARQUIVO NESCESSÁRIO PARA CONEXÕES NO BD
-$conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE); //**CRIA A CONEXÃO NO BD
 
-// **Verifica conexão 
-if ($conn->connect_error) {
-    die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
-}
 
 if(isset($_POST["cpf"])){
     //tag dentro do $_Post é o name do html
@@ -19,8 +13,17 @@ if(isset($_POST["cpf"])){
     $Senha = $_POST["password"];
 }
 else{
-    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
+    include '../geral/controle.php';
     redirect();
+}
+
+
+require '../BD/ConectaDB.php';//**ARQUIVO NESCESSÁRIO PARA CONEXÕES NO BD
+$conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE); //**CRIA A CONEXÃO NO BD
+
+// **Verifica conexão 
+if ($conn->connect_error) {
+    die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
 
 try{

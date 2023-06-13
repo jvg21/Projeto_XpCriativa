@@ -1,5 +1,13 @@
 <?php 
-session_start();
+include '../geral/controle.php';
+
+if(isset($_POST['email'])&&$_POST['telefone']){
+    $Email = $_POST["email"];
+    $Telefone = $_POST["telefone"];
+
+}else{
+    redirect();
+}
 require '../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -7,15 +15,6 @@ $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
-
-try{
-    $Email = $_POST["email"];
-    $Telefone = $_POST["telefone"];
-}catch(Exception $e){
-    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
-    redirect();
-}
-
 
 try{
     $Login = $_SESSION['login'];

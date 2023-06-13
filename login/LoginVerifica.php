@@ -44,7 +44,6 @@ if ($result = $conn->query($sql)) {
         <?php
         
     }else{
-        //$_SESSION ['nao_autenticado'] = true;         // Ativa ERRO nas variáveis de sessão
         ?>
         <script language="javascript" type="text/javascript">
             

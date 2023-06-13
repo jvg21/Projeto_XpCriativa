@@ -1,12 +1,24 @@
 <?php 
-session_start();
+include '../geral/controle.php';
 require '../BD/ConectaDB.php';
+
+if(isset($_POST["password"])){
+    $SenhaAtual = md5($_POST["password"]);
+    $NovaSenha = md5($_POST["new_password"]);
+}else{
+    redirect();
+}
+
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
 // Verifica conexão 
 if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
+
+// Recebe os inputs do formulário
+
+
 
 // Recebe a senha do banco e armazena em $Senha
 $SQL = "SELECT * FROM $DATABASE.usuario WHERE email = '".$_SESSION['login']."'";
@@ -25,14 +37,8 @@ if ($result->num_rows == 1) {
     <?php
 }
 
-// Recebe os inputs do formulário
-try{
-    $SenhaAtual = md5($_POST["password"]);
-    $NovaSenha = md5($_POST["new_password"]);
-}catch(Exception $e){
-    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
-    redirect();
-}
+
+
 
 // Compara a senha atual inserida é igual a que está no banco
 try{
