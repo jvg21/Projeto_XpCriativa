@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../estilo/crud.css"> -->
     
-    <script src="/JS/crudAdm.js" defer></script>
-    <title>Hotelzin - Desativar Quarto</title>
+    <script src="http://localhost/xp/Projeto_XpCriativa/Adm/JS/crudAdm.js" defer></script>
+    <title>Hotelzin - Reativar Quarto</title>
     
 </head>
 <body>

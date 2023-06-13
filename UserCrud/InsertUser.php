@@ -25,6 +25,24 @@ $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE); //**CRIA A CONEXÃO NO BD
 if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
+$EmailCheck = "SELECT usuario.email FROM hotelzin.usuario";
+$EmailQuarry = $conn->query($EmailCheck); //**realiza a query no banco(cadastro)
+$emails = array();
+if ($EmailQuarry->num_rows > 0) {
+    while ($Erow = $EmailQuarry->fetch_assoc()) {
+        array_push($emails,$Erow['email']);
+    }
+}
+foreach($emails as $em){
+    if($Email == $em){
+        echo "<script type='text/javascript'>
+            alert('Este email já está cadastrado');
+            window.location.href = 'http://localhost/xp/Projeto_XpCriativa/CadUser.php';
+
+        </script>;";
+        die();
+    }
+}
 
 try{
 
