@@ -12,7 +12,6 @@
 <body>
 
     <?php
-    include '../geral/controle.php'; 
     include '../geral/menu.php';?>
 
 

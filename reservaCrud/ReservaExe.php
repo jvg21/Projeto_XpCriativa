@@ -49,6 +49,7 @@ try{
 
     $sql= "INSERT INTO $DATABASE.reserva (fk_idquarto,fk_idusuario,data_checkin,data_checkout,hora_checkin,hora_checkout) 
     VALUES ('$Quarto_id','$User_id','$Data_in','$Data_out','$Hora_in','$Hora_out');";
+    $result = $conn->query($sql);
                                     
     ?>
     <script language="javascript" type="text/javascript">
