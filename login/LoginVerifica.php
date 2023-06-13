@@ -35,17 +35,11 @@ if ($result = $conn->query($sql)) {
             $_SESSION ['nivel'] = "Cliente";
         }
         ?>
-        <style>
-            body{
-                background-image: url("../imagens/fundo.jpg");
-            }
-
-        </style>
-        <?php sleep(200);?>
+    
         <script language="javascript" type="text/javascript">
            
-            alert("Logado com Sucesso");
-            window.location.replace("http://localhost/xp/Projeto_XpCriativa/index.php");
+            location.replace("http://localhost/xp/Projeto_XpCriativa/index.php");
+            sleep(200);
         </script>
         <?php
         
