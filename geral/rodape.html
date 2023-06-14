@@ -22,6 +22,10 @@ $sql= "INSERT INTO $DATABASE.TABELA (nome,cpf,email,telefone,data_nasc,sexo,senh
         ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),NULL);"
 $result = $conn->query($sql);
 /////////////////////////////////////////////////////////////////////////
+
+
+#SelectUser
+
 //////////////////SELECT////////////////////////////////////////////////
 $sql = "SELECT * FROM ".$DATABASE.".usuario";
 $result = $conn->query($sql);
@@ -35,8 +39,25 @@ if ($result->num_rows >0) {
     }
 }
 ////////////////////////////////////////////////////////
+https://www.w3schools.com/html/html_form_input_types.asp     ------ tipos de input em html
 
-#SelectUser
-https://www.w3schools.com/html/html_form_input_types.asp
 
+verificações:
+
+required       //obrigatorio
+
+texto:
+maxlength="15"  //tamanho máximo
+minlength="6"   //tamanho minimo
+
+cpf:
+pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+
+data:
+pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}"
+min="1920-01-01"
+max="2023-06-06"
+
+senha:    numeros  minusculas maiusculas simbolos     tamanho
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,15}"  
 -->

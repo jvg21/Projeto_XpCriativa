@@ -28,7 +28,8 @@
                 <input type="password" class="form-control" id="new_password" name="new_password" placeholder="Nova senha*" required maxlength="15"  autocomplete="off" onchange="confirmaSenha()"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,15}" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 6 até 15 caracteres.">
             </div>
-            
+            <input name="checkSenha" type="checkbox" onclick="MostrarSenha('password')"> 
+            <label for="checkSenha">Mostrar Senha</label>
             <input type="submit" class="btn btn-success btn-block" name="" value="Alterar" >
         </form>
     </div>
