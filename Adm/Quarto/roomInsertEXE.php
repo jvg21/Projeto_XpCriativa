@@ -24,7 +24,6 @@ if ($conn->connect_error) {
 $sql = "SELECT num_quarto FROM quarto";
 $result_quartos = $conn->query($sql);
 $quartos = array();
-
 if ($result_quartos->num_rows > 0) {
     while ($row = $result_quartos->fetch_assoc()) {
         array_push($quartos,$row['num_quarto']);

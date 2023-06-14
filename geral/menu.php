@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Menu</title>
     <link rel="stylesheet" href="http://localhost/xp/Projeto_XpCriativa/geral/Css/menuCss.css">
+
+    <script>
+        function redirect(){
+            window.location.href = "http://localhost/xp/Projeto_XpCriativa/Login/Logout.php";
+            alert("Sessão Expirada, Redirecionando");
+        }
+
+    </script>
 </head>
 <body>
+    
     <nav>
         <!-- <div class="logos">
             <img src="imagens/logo.png" class="img-fluid" height="80vh" width="0vh"/> 
         </div> -->
-
         <ul>
-        
             <?php
            
             include 'controle.php';
@@ -72,6 +79,16 @@
                         </div>
                     </li>';
                 }
+
+
+                if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 600)) {
+                    echo'
+                        <script language="javascript" type="text/javascript">
+                            redirect();
+                        </script>';
+                    
+                }
+                $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
             ?>
 
             
