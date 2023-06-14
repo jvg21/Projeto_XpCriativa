@@ -22,10 +22,6 @@
     
     <nav>
         <ul>
-        <div>
-            <img id="imagem" src="http://localhost/xp/Projeto_XpCriativa/imagens/logo.png" alt="Imagem">
-        </div>
-        <ul>
             
         
             <?php
