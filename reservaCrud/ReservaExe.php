@@ -7,17 +7,16 @@ if ($conn->connect_error) {
     die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
 }
 
-try{
+if(isset($_POST["quarto"])){
     $Tipo_quarto = $_POST["quarto"];
     $Data_in = $_POST["data_in"];
     $Data_out = $_POST["data_out"];
     $Hora_in = $_POST["hora_in"];
     $Hora_out = $_POST["hora_out"];
-}catch(Exception $e){
+}else{
     include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
 }
-
 
 try{
 
