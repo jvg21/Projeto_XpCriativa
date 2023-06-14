@@ -33,7 +33,7 @@
         <form class="form-signup" action="UserCrud/AlterUser.php" method="POST" enctype="multipart/form-data">
             <h2>Alterar cadastro</h2>
             <div class="form-group mb-2">
-                <?php echo '<img src="data:image;base64,'.base64_encode($Foto).'">'; ?>
+                <?php echo '<img src="data:image;base64,'.base64_encode($Foto).'" heigth=80 width=80>'; ?>
                 <input type="hidden" name="MAX_FILE_SIZE" value="16777215" />
                 <input type="file" id="imagem" name="imagem" accept="imagem/*" onchange="validaImagem(this);">
             </div>
