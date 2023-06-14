@@ -1,10 +1,10 @@
 <?php
-try{
+if(isset($_POST['id-quarto'])){
     $id = $_POST['id-quarto'];
     $nome = $_POST['nomeT'];
     $preco = $_POST['preco'];
     $descricao = $_POST['descricao'];
-}catch(Exception $e){
+}else{
     include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
 }

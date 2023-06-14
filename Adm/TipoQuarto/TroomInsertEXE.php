@@ -1,15 +1,14 @@
 <?php
-try{
+
+if(isset($_POST['nomeT'])){
     $nome = $_POST['nomeT'];
     $preco = $_POST['preco'];
     $descricao = $_POST['descricao'];
-    //echo "$nome,$preco,$descricao";
-
-}catch(Exception $e){
+}else{
     include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
     redirect();
 }
-// echo $num.$id_tipo;
+
 require '../../BD/ConectaDB.php';
 $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
