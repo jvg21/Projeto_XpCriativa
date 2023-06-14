@@ -21,7 +21,8 @@
     </thead>
     <tbody>
         
-        <?php//********************Listagem************************** */
+        <?php
+        //********************Listagem************************** */
             require '../BD/ConectaDB.php';
             $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
