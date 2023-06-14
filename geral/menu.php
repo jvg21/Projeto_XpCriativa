@@ -12,7 +12,7 @@
     <script>
         function redirect(){
             window.location.href = "http://localhost/xp/Projeto_XpCriativa/Login/Logout.php";
-            alert("Sessão Expirada, Redirecionando");
+            alert("Sessão Expirada, atchimmmmmmmm");
         }
 
     </script>
@@ -26,7 +26,7 @@
             
         
             <?php
-           //error_reporting(0);
+           error_reporting(0);
             include 'controle.php';
             if(isset($_SESSION['login'])){
                                 
