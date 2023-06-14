@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="larica.css">
     <title>Menu</title>
     <link rel="stylesheet" href="http://localhost/xp/Projeto_XpCriativa/geral/Css/menuCss.css">
 
@@ -21,10 +20,8 @@
 <body>
     
     <nav>
-        <ul>
-        <div>
-            <img id="imagem" src="http://localhost/xp/Projeto_XpCriativa/imagens/logo.png" alt="Imagem">
-        </div>
+        
+        
         <ul>
             
         
