@@ -25,7 +25,7 @@
             
         
             <?php
-           error_reporting(0);
+           //error_reporting(0);
             include 'controle.php';
             if(isset($_SESSION['login'])){
                                 
@@ -71,7 +71,7 @@
                         }     
                         echo'
                         <a href="http://localhost/xp/Projeto_XpCriativa/CadReserva.php">Fazer Reserva</a>
-                        <a href="#">Minhas Reservas</a>
+                        <a href="http://localhost/xp/Projeto_XpCriativa/reservaCrud/reservaList.php">Minhas Reservas</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/AltUser.php">Meus Dados</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/AltSenha.php">Trocar Senha</a>
                         <a href="http://localhost/xp/Projeto_XpCriativa/login/logout.php">Logout</a>

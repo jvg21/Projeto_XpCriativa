@@ -15,29 +15,54 @@
     include '../geral/menu.php';
     redirect_if_not_login();
     ?>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Numero Quarto</th>
+                <th>Data Check In</th>
+                <th>Data Check Out</th>
+                <th>Horário Check IN</th>
+                <th>Horário Check OUT</th>
 
+            </tr>
+        </thead>
+    <tbody>
+    
 
     <?php
         require '../BD/ConectaDB.php';
         $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
+        
 
         // Verifica conexão 
         if ($conn->connect_error) {
             die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
         }
-        $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto WHERE quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto";
+        $sql = "SELECT * FROM hotelzin.reserva inner JOIN quarto ON reserva.fk_idquarto=quarto.idquarto INNER JOIN usuario ON usuario.idusuario=reserva.fk_idusuario WHERE usuario.email='".$_SESSION['login']."'";
         $result = $conn->query($sql);
         if ($result->num_rows >0) {
             while ($row = $result->fetch_assoc()) {
-            
-                echo $row['nome'];
+                
+                echo'<tr>
+                    <td>'.$row['num_quarto'].'</td>
+                    <td>'.$row['data_checkin'].'</td>
+                    <td>'.$row['data_checkout'].'</td>
+                    <td>'.$row['hora_checkin'].'</td>
+                    <td>'.$row['hora_checkout'].'</td>
+
+                </tr>';
             }
 
         }else{
-            echo  $conn-> error;
+            echo'<tr>
+                    <td>Nenhuma Reserva Efetuada</td>
+
+                </tr>';
         }
             
     ?>
+    </tbody>
+    </table>
     <?php include '../geral/rodape.html'?>
 </body>
 </html>
