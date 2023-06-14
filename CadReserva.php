@@ -10,7 +10,8 @@
 </head>
 <body>
     <?php include './geral/menu.php';
-    redirect_if_not_login();
+    if(!isset($_SESSION['']))
+    header("Location: login.php")
     
     ?>
     

@@ -27,7 +27,7 @@
         </div>
     </main>
 
-    <?php include 'rl.html';?>
+    <?php include 'rl.php';?>
       <?php include './geral/rodape.html';?>
 </body>
 </html>

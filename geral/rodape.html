@@ -14,6 +14,28 @@ Crud Reserva = /reservaCrud--php (php+banco)--------CadReserva.php(formularios)
 #adcionar campo no banco
 #adcionar campo no formulario
 #InsertUser (***** mostram quais são importantes)
+require '../BD/ConectaDB.php';
+$conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
+
+//////INSERT /////////////////////////////////////////////////
+$sql= "INSERT INTO $DATABASE.TABELA (nome,cpf,email,telefone,data_nasc,sexo,senha,foto) VALUES 
+        ('$Nome','$Cpf','$Email','$Telefone','$Data','$Sexo',md5('$Senha'),NULL);"
+$result = $conn->query($sql);
+/////////////////////////////////////////////////////////////////////////
+//////////////////SELECT////////////////////////////////////////////////
+$sql = "SELECT * FROM ".$DATABASE.".usuario";
+$result = $conn->query($sql);
+if ($result->num_rows >0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "Seu nome é:". $row['nome']." ";
+        echo "Nasceu:". $row['data_nasc'];
+        echo "Time do coração é ".$row["Time"];
+        echo '<br>';
+
+    }
+}
+////////////////////////////////////////////////////////
+
 #SelectUser
 https://www.w3schools.com/html/html_form_input_types.asp
 
