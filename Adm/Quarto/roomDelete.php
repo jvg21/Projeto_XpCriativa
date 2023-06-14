@@ -11,9 +11,10 @@
 </head>
 <body>
     <?php
-        try{
+       if(isset($_GET['id'])){
             $id = $_GET['id'];
-        }catch(Exception $e){
+
+        }else{
             include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
             redirect();
         }

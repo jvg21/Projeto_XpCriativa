@@ -17,7 +17,7 @@
  
     <div class="Nav">
         
-        <li><a href="#quartos" onclick="trocarCrud1()">Quartos</a></li>    
+        <li><a href=" " onclick="trocarCrud1()">Quartos</a></li>    
         <li><a href="#ModeloQuartos" onclick="trocarCrud2()">Modelo de Quartos</a></li>
     </div>
     

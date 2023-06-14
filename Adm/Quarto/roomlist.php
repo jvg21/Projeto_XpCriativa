@@ -2,11 +2,22 @@
     <thead>
         <tr>
             <th scope="col" colspan="6">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inserirQuartoModal">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#inserirQuartoModal">
                 <img src="../imagens/iconeMais.svg">
                     Inserir Quarto
                 </button>
             </th>
+
+        </tr>
+        <br/>
+        <tr>
+            <th></th>
+            <th><button class="btn btn-primary" onclick="updateURL(1)">Ativados</button></th>
+            <th></th>
+            <th><button class="btn btn-primary" onclick="updateURL(0)">Desativados</button></th>
+            <th></th>
+            <th><button class="btn btn-primary" onclick="redirectCleanUrl()">Todos</button></th>
+      
 
         </tr>
         <br/>
@@ -22,6 +33,7 @@
     <tbody>
         
         <?php
+
             require '../BD/ConectaDB.php';
             $conn = new mysqli($LOCALDB, $USER, $PASS, $DATABASE);
 
@@ -30,11 +42,20 @@
                 die("<strong> Falha de conexão: </strong>" . $conn->connect_error);
             }
             
+            if(isset($_GET['atv'])&&$_GET['atv']==0){
+                $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON                                            
+                quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto WHERE ativado = 0 ORDER BY idquarto DESC";
+            }elseif(isset($_GET['atv'])&&$_GET['atv']==1){
+                $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON                                            
+                quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto WHERE ativado = 1 ORDER BY idquarto DESC";
 
-            $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON                                            
-            quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto	ORDER BY ativado DESC,idquarto";
+            }else{
+                $sql = "SELECT * FROM quarto INNER JOIN tipo_quarto ON                                            
+                quarto.fk_tipo_quarto=tipo_quarto.idtipo_quarto ORDER BY ativado DESC,idquarto";
+            }
+            
             $result = $conn->query($sql);
-
+            
             if ($result->num_rows >0) {
                 while ($row = $result->fetch_assoc()) {
                     $cod = $row['idquarto'];

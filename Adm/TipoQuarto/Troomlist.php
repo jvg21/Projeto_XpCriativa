@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th scope="col" colspan="6">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inserirTipoQuartoModal">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#inserirTipoQuartoModal">
                 <img src="../imagens/iconeMais.svg">
                     Inserir Tipo de Quarto
                 </button>
