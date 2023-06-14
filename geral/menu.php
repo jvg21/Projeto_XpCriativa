@@ -29,9 +29,8 @@
             
         
             <?php
-           
+           error_reporting(0);
             include 'controle.php';
-            
             if(isset($_SESSION['login'])){
                                 
                 $LOCALDB = "localhost:3306";
