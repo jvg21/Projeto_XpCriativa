@@ -24,6 +24,7 @@
         <tr>
             <th scope="col">id</th>
             <th scope="col">Número Quarto</th>
+            <th>tamanho</th>
             <th scope="col">Tipo Quarto</th>
             <th scope="col">Preço</th>
             <th scope="col">Alterar</th>
@@ -64,6 +65,7 @@
                             <tr>
                                 <th scope="row">'.$row['idquarto'].'</th>
                                 <td>'.$row['num_quarto'].'</td>
+                                <td>'.$row['tamanho'].'</td>
                                 <td>'.$row['nome'].'</td>
                                 <td>R$ '.$row['preco'].'</td>
                                 <td class="icone"><a href="./Quarto/roomUpdate.php?id='.$cod.'"><img src="../imagens/iconeEdit.svg"></a></td>
