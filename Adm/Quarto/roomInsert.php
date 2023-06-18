@@ -17,10 +17,10 @@
               <input type="number" class="form-control" id="numero" name="numero" required>
             </div>
 
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="tamanho" class="form-label">tamanho</label>
               <input type="number" class="form-control" id="numero" name="tamanho" required>
-            </div>
+            </div> -->
 
             <div class="mb-3">
               <label for="opcoes" class="form-label">Opções</label>

@@ -7,7 +7,7 @@ if(!isset($_POST['numero']) || !isset($_POST['opcoes'])){
 }else{
     $numero = $_POST['numero'];
     $id_tipo = $_POST['opcoes'];
-    $tamanho = $_POST['tamanho'];
+    // $tamanho = $_POST['tamanho'];
 }
 // echo $num.$id_tipo;
 require '../../BD/ConectaDB.php';
