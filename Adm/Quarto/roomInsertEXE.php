@@ -44,7 +44,7 @@ foreach ($quartos as $item) {
 }
 if ($cont == TRUE){
     //echo 'oi';
-    $sql = "INSERT INTO quarto (num_quarto,fk_tipo_quarto,tamanho) VALUES ('$numero','$id_tipo','$tamanho')";
+    $sql = "INSERT INTO quarto (num_quarto,fk_tipo_quarto) VALUES ('$numero','$id_tipo')";
     try{
         $result = $conn->query($sql);
         $conn->close();
