@@ -49,7 +49,7 @@
                     <td>'.$row['data_checkout'].'</td>
                     <td>'.$row['hora_checkin'].'</td>
                     <td>'.$row['hora_checkout'].'</td>
-                    <td class="icone"><a href="../reservaCrud/reservaDelete?id='.$row['idreserva'].'"><img src="../imagens/iconeLixo.svg"></a></td>
+                    <td class="icone"><a href="../reservaCrud/reservaDelete.php?id='.$row['idreserva'].'"><img src="../imagens/iconeLixo.svg"></a></td>
 
                 </tr>';
             }
