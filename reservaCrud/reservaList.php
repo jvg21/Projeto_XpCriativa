@@ -15,14 +15,15 @@
     include '../geral/menu.php';
     redirect_if_not_login();
     ?>
-    <table class="table table-hover">
+    <table class="table table-hover text-center">
         <thead>
             <tr>
                 <th>Numero Quarto</th>
                 <th>Data Check In</th>
                 <th>Data Check Out</th>
-                <th>Horário Check IN</th>
-                <th>Horário Check OUT</th>
+                <th>Horário Check In</th>
+                <th>Horário Check Out</th>
+                <th>Cancelar Reserva</th>
 
             </tr>
         </thead>
@@ -42,13 +43,13 @@
         $result = $conn->query($sql);
         if ($result->num_rows >0) {
             while ($row = $result->fetch_assoc()) {
-                
                 echo'<tr>
                     <td>'.$row['num_quarto'].'</td>
                     <td>'.$row['data_checkin'].'</td>
                     <td>'.$row['data_checkout'].'</td>
                     <td>'.$row['hora_checkin'].'</td>
                     <td>'.$row['hora_checkout'].'</td>
+                    <td class="icone"><a href="../reservaCrud/reservaDelete?id='.$row['idreserva'].'"><img src="../imagens/iconeLixo.svg"></a></td>
 
                 </tr>';
             }
