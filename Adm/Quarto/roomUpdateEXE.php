@@ -1,11 +1,12 @@
 <?php    
-if(!isset($_POST['id-quarto'])||!isset($_POST['num-quarto'])||!isset('opcoes')){
-    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
-    redirect();
-}else{
+if(isset($_POST['id-quarto'])){
     $id = $_POST['id-quarto'];
     $num = $_POST['num-quarto'];
     $id_tipo = $_POST['opcoes'];
+    
+}else{
+    include 'http://localhost/xp/Projeto_XpCriativa/geral/controle.php';
+    redirect();
 
 }
 // echo $num.$id_tipo;
